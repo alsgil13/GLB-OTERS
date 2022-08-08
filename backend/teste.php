@@ -81,6 +81,7 @@ echo "<br>Total grupo 3: $totalG3";
 
 
 //define os grupos
+
 $totais = [
     array('nome' => '1', 'tanto' => $totalG1),
     array('nome' => '2', 'tanto' => $totalG2),
@@ -91,15 +92,14 @@ $totais = [
 $filtro = array_column($totais, 'tanto');
 
 array_multisort($totais, SORT_DESC, $filtro);
-//usort($totais,'DescSort');
 
 echo "<pre>";
 var_dump($totais);
 echo "</pre>";
 
 $grupo = (int)$totais[0]['nome'];
-echo "<br>Total grupo 2: <br>";
-var_dump($grupo);
+echo "<br>Grupo: $grupo<br>";
+// var_dump($grupo);
 
 // if($totalG1 <= $totalG2 && $totalG1 <= $totalG3){
 //     $grupo = 1;
