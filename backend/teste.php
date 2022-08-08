@@ -90,7 +90,7 @@ $totais = [
 
 $filtro = array_column($totais, 'tanto');
 
-array_multisort($totais, SORT_ASC, $filtro);
+array_multisort($totais, SORT_DESC, $filtro);
 //usort($totais,'DescSort');
 
 echo "<pre>";
