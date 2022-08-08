@@ -83,15 +83,18 @@ echo "<br>Total grupo 3: $totalG3";
 //define os grupos
 
 $totais = [
-    array('nome' => '1', 'tanto' => $totalG1),
-    array('nome' => '2', 'tanto' => $totalG2),
-    array('nome' => '3', 'tanto' => $totalG3)
+    // array('nome' => '1', 'tanto' => $totalG1),
+    // array('nome' => '2', 'tanto' => $totalG2),
+    // array('nome' => '3', 'tanto' => $totalG3)
+    "1" => $totalG1,
+    "2" => $totalG2,
+    "3" => $totalG3
 
 ];
 
 //$filtro = array_column($totais, 'tanto');
 
-arsort($totais);
+asort($totais);
 
 echo "<pre>";
 var_dump($totais);
