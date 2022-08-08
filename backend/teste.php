@@ -89,9 +89,9 @@ $totais = [
 
 ];
 
-$filtro = array_column($totais, 'tanto');
+//$filtro = array_column($totais, 'tanto');
 
-array_multisort($totais, SORT_DESC, $filtro);
+asort($totais);
 
 echo "<pre>";
 var_dump($totais);
