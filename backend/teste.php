@@ -149,8 +149,8 @@ if($grupo == 3){
 
 $array_sequencias = [
     1 => ['a','b','c'],
-    1 => ['c','b','a'],
-    1 => ['a','c','b']
+    2 => ['c','b','a'],
+    3 => ['a','c','b']
 ];
 
 $sequencia = $array_sequencias[$seqcod];
