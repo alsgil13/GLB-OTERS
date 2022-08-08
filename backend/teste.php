@@ -146,5 +146,17 @@ if($grupo == 3){
     }
 
 }
- echo "<br>Sequencia: $seqcod";
+
+$array_sequencias = [
+    1 => ['a','b','c'],
+    1 => ['c','b','a'],
+    1 => ['a','c','b']
+];
+
+$sequencia = $array_sequencias[$seqcod];
+
+echo "<br>Sequencia: $seqcod = <br><pre>";
+var_dump($sequencia);
+echo "</pre>";
+
 
