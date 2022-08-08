@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+    function verificaEmail() {
+            var email = $('#email').val();
+            var url_ajax = "backend/verificaEmail.php?email=" + email;
+    
+            $.ajax({
+                type: "GET",
+                url: url_ajax,
+                data: email
+            }).done(function (result) {
+                
+                if(result!= ""){
+                    window.alert("Email já utilizado, por favor utilize outro e-mail.");
+                    $("#enviarAceite").attr("disabled", true);
+                    $("#enviarAceite").text("Utilize outro e-mail para continuar");
+                } else {
+                    $("#enviarAceite").attr("disabled", false);
+                    $("#enviarAceite").text("Iniciar");
+                }
+            });
+    }
+</script>
+<title>Laboratório de Processos Associativos, Controle Temporal e Memória</title>
+</head>
+<body >
+    
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <br><br><br>
+        <h1 class="text-center">Laboratório de Processos Associativos, Controle Temporal e Memória</h1>
+    </div>
+</div>
+
+<div class="container">
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <br>
+        <h2 class="text-center">Termo de Consentimento Livre e Esclarecido</h2>
+
+        <p>Você está sendo convidado a participar da pesquisa intitulada “Efeitos das propriedades de valor hedônico, estimação de tempo e memória temporal”, conduzida pela mestranda Edilaine Lilian Leticio, sob a orientação do Prof. Dr. José Lino Oliveira Bueno do Departamento de Psicologia da FFCLRP da Universidade de São Paulo. Esta pesquisa é realizada com uso de software desenvolvido para o experimento.</p>
+        <p>Este comunicado visa dar a você participante convidado uma explicação clara da natureza da pesquisa, assim como do seu papel como participante voluntário.</p>
+        <p>A pesquisa estuda as relações entre a música e alguns processos cognitivos. Sua participação tomará no máximo 20 minutos, sendo, 10 minutos no primeiro dia e 10 minutos do dia seguinte. </p>
+        <p>Sua participação consiste em estar atento a estímulos apresentados e estimar quanto tempo durou cada apresentação, de acordo com sua percepção. </p>
+        <p>Esta tarefa não apresenta nenhum risco previsível para você, exceto pelo fato de que algum estímulo pode parecer pouco familiar por alguns participantes. Os  estímulos são breves e não se espera que lhe causem desconforto.</p>
+        <p>A participação neste estudo é estritamente voluntária. A informação coletada durante o processo será guardada indefinidamente e só será empregada para propósitos de pesquisa. Suas respostas serão codificadas usando um número de identificação e os resultados serão divulgados de forma grupal evitando assim qualquer uso de nome de pessoa ou família e, por tanto, serão anônimas.</p>
+        <p>Você pode interromper a sua participação em qualquer momento sem que isso acarrete algum tipo de penalidade. Se alguma das perguntas durante a sessão lhe incomodar, você tem o direito de não a responder. Desde já agradecemos sua participação.</p>
+        <p>Esclarecemos que não terá nenhuma despesa financeira para a realização do estudo. Portanto, não está previsto reembolso financeiro de qualquer natureza. Este Termo de Consentimento poderá ser copiado e arquivado por você. Após o experimento uma cópia ficará arquivada pelos pesquisadores. </p>
+        <p>Qualquer dúvida com relação à participação e aos procedimentos dessa pesquisa poderá ser esclarecida antes, durante e após a realização do estudo, tanto com a pesquisadora quanto com o professor que orienta este estudo, Prof. Dr. José Lino Oliveira Bueno. Para eventuais dúvidas sobre questões éticas do projeto, entrar em contato com o Comitê de Ética em Pesquisa da Faculdade de Filosofia, Ciências e Letras de Ribeirão Preto – USP, cujos dados para contato são: Avenida Bandeirantes, 3900 - Bloco 01, Sala 07 - 14040-901 - Ribeirão Preto - SP – Brasil. Fone: (16) 3315-4811 / Fax: (16) 3633-2660 - Atendimento de 2ª a 6ª das 13h30 às 17h30. E-mail: <a href="mailto:coetp@listas.ffclrp.usp.br">coetp@listas.ffclrp.usp.br</a>.</p>
+        <p>Obrigado por sua atenção e colaboração!</p>
+
+        
+        <form action="" id="form_aceite" method="POST" role="form"></form>
+        <!-- <form action="tocaAudio.html" id="form_aceite" method="POST" role="form"> -->
+            <legend>ACEITE PARTICIPAR</legend>
+            <div class="form-group">
+                <input type="radio"  name="aceite" id="aceiteS" value="Sim">
+                <label for="sim">Sim</label><br>
+                <input type="radio"  name="aceite" id="aceiteN" value="Não" checked>
+                <label for="nao">Não</label><br>
+            </div>
+            <div class="form-group">
+                <label for="email">Insira seu e-mail:<br><small><i>O endereço de e-mail inserido abaixo será necessário para a segunda fase do experimento.</i></small></label>
+                <input onchange="verificaEmail()"  required type="email" class="form-control" id="email" placeholder="E-mail" >
+                <label for="nome">Insira seu nome completo: <br><small><i>O nome inserido abaixo será utilizado para elaboração do certificado de participação.</i></small></label>
+                <input required type="text" class="form-control" id="nome" placeholder="Nome Completo" >
+                <br>
+            </div>            
+            <p><small>Os dados de e-mail e nome não serão usados para identificação pessoal e serão mantidos em sigilo.</small></p>
+            <button type="submit" id="enviarAceite"class="btn btn-primary btn-lg btn-block" onclick="iniciarTreino()" >Iniciar</button>
+            
+        </form>
+        
+        <br><br><br><br>
+    </div>
+</div>
+</div>
+
+<!-- <script src="assets/js/ajax.js?v=1"></script> -->
+<script src="assets/js/validaForms.js?v=2"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>

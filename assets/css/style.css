@@ -1,0 +1,39 @@
+body {
+    /* background-color: rgb(121,126,121); */
+    background-color:whitesmoke;
+}
+p{
+    text-align: justify !important;
+}
+
+button{
+    width: 100%;
+    margin-bottom: 3px;
+}
+
+.caixa-circ{
+    background-color: rgb(121,126,121);
+    /* background-color: rgb(32,97,64); */
+}
+
+.btn-test{
+    width: 40%;
+    margin-right: 3px;
+}
+
+.invisivel{
+    visibility:hidden;
+}
+
+
+button{
+    height: 10vh;
+    font-size: 1em;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.btn-test{
+
+    width: 50%;
+}
