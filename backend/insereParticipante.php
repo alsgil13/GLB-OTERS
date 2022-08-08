@@ -113,7 +113,7 @@ foreach($totais as $chave => $valor){
 //Define a sequência
 if($grupo == 3){
     $seqcod = 1;
-    $sequencia = "['a','b','c']";
+    $sequencia = '["a","b","c"]';
 } else {
     //Buscar sequência
     if($grupo == 1){
@@ -149,9 +149,9 @@ if($grupo == 3){
 }
 
 $array_sequencias = [
-    1 => "['a','b','c']",
-    2 => "['c','b','a']",
-    3 => "['a','c','b']"
+    1 => '["a","b","c"]',
+    2 => '["c","b","a"]',
+    3 => '["a","c","b"]'
 ];
 
 $sequencia = $array_sequencias[$seqcod];
