@@ -96,7 +96,10 @@ array_multisort($totais, SORT_DESC, $filtro);
 echo "<pre>";
 var_dump($totais);
 echo "</pre>";
-//echo "<br>Total grupo 2: $totalG2";
+
+$grupo = $totais[0];
+echo "<br>Total grupo 2: <br>";
+var_dump($grupo);
 
 // if($totalG1 <= $totalG2 && $totalG1 <= $totalG3){
 //     $grupo = 1;
