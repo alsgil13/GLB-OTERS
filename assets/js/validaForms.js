@@ -156,18 +156,19 @@ function insereParticipante(){
         $.ajax({
             type: "GET",
             url: url_ajax,
-            data: email
+            data: ""
         }).done(function (result) {
             
             if(result!= ""){
+                //Não deu certo, exibir mensagem de erro.
+                window.alert(result);
+            } else {
                 //Ok Deu certo, encaminha para o treino de ruído branco
                 setTimeout(function() {
                     // window.location.href = "tocaAudioTreino.html";
                     window.location.href = "intrucoes.html";
                 }, 100);
-            } else {
-                //Não deu certo, exibir mensagem de erro.
-                window.alert(result);
+
             }
         });
 
