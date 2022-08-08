@@ -73,7 +73,7 @@ $stmt->execute();
 $totalG3 = 0;
 while($d = $stmt->fetch(PDO::FETCH_ASSOC)){
     //array_push($dados, $d);
-    $totalG3 = $d['tanto'];
+    $totalG3 = (int)$d['tanto'];
     //coleta a quantidade de sequências do grupo 2
 
 }
@@ -87,7 +87,8 @@ $totais = [
     "3" => $totalG3
 ];
 
-usort($totais,'DescSort');
+array_multisort($totais, SORT_DESC);
+//usort($totais,'DescSort');
 
 echo "<pre>";
 var_dump($totais);
