@@ -49,15 +49,15 @@ while($d = $stmt->fetch(PDO::FETCH_ASSOC)){
     switch($d['seqcod']){
         case 1:
             $grupo2seqs['1'] = (int)$d['tanto'];
-            $totalG1 += $grupo2seqs['1'];
+            $totalG2 += $grupo2seqs['1'];
             break;
         case 2:
             $grupo2seqs['2'] = (int)$d['tanto']; 
-            $totalG1 += $grupo2seqs['2'];
+            $totalG2 += $grupo2seqs['2'];
             break;
         case 3:
             $grupo2seqs['3'] = (int)$d['tanto'];
-            $totalG1 += $grupo2seqs['3'];
+            $totalG2 += $grupo2seqs['3'];
             break;
     }
 }
