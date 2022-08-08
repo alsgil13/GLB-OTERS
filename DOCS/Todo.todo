@@ -1,0 +1,8 @@
+- Implantar Index
+    - Criar ajax @done
+    - Criar JS para verificar campos do form
+    - testar email repetido @done
+    - testar e-mail novo @done
+    - criar connect do bd @done
+    - Detalhes: a verificação de e-mail é feita via ajax controlada por um script JS inscrito no arquivo index.html
+Criar Ajax para salvasr dados após o index
