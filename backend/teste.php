@@ -91,7 +91,7 @@ $totais = [
 
 //$filtro = array_column($totais, 'tanto');
 
-asort($totais);
+arsort($totais);
 
 echo "<pre>";
 var_dump($totais);
