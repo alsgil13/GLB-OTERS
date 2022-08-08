@@ -2,6 +2,8 @@
 
 require_once "../db/connect.php";
 
+
+/** Busca Grupos no banco para definir o deste usuário */
 //Fazer select para grupo 1 
 $select_grupo1 = "SELECT seqcod, COUNT(seqcod) as tanto FROM lpactm_data_2 WHERE grupo = 1 GROUP BY seqcod ORDER BY tanto ASC;";
 $stmt= $conn->prepare($select_grupo1);
@@ -86,7 +88,6 @@ $totais = [
 
 ];
 
-//$filtro = array_column($totais, 'tanto');
 
 asort($totais);
 
@@ -107,20 +108,7 @@ echo "<br>Grupo: $grupo<br>";
 if($grupo == 3){
     $seqcod = 1;
 } else {
-    //Buscar sequências no banco
-    // $select_seq = "SELECT seqcod, COUNT(seqcod) as tanto FROM lpactm_data_2 WHERE grupo = $grupo GROUP BY (seqcod) ORDER BY tanto DESC;";
-    // $stmt= $conn->prepare($select_seq);
-    // $stmt->execute();
-    // //$totalG3 = 0;
-    // $seqs = [];
-    // while($d = $stmt->fetch(PDO::FETCH_ASSOC)){
-        
-    //     $totalG3 = (int)$d['tanto'];
-    // }
-
-    // echo "<pre>";
-    // var_dump($grupo2seqs);
-    // echo "</pre>";
+    //Buscar sequência
     if($grupo == 1){
         echo "<pre>";
         var_dump($grupo1seqs);
@@ -160,14 +148,3 @@ if($grupo == 3){
 }
  echo "<br>Sequencia: $seqcod";
 
-// if($totalG1 <= $totalG2 && $totalG1 <= $totalG3){
-//     $grupo = 1;
-// }
-
-// if($totalG2 <= $totalG1 && $totalG2 <= $totalG3){
-//     $grupo = 2;
-// }
-
-// if($totalG3 <= $totalG1 && $totalG3 <= $totalG2){
-//     $grupo = 3;
-// }
