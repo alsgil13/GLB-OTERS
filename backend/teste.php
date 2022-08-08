@@ -82,12 +82,15 @@ echo "<br>Total grupo 3: $totalG3";
 
 //define os grupos
 $totais = [
-    "1" => $totalG1,
-    "2" => $totalG2,
-    "3" => $totalG3
+    array('nome' => '1', 'tanto' => $totalG1),
+    array('nome' => '2', 'tanto' => $totalG2),
+    array('nome' => '3', 'tanto' => $totalG3)
+
 ];
 
-array_multisort($totais, SORT_DESC);
+$filtro = array_column($data, 'tanto');
+
+array_multisort($totais, SORT_ASC, $filtro);
 //usort($totais,'DescSort');
 
 echo "<pre>";
