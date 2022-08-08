@@ -1,8 +1,21 @@
 - Implantar Index
     - Criar ajax @done
-    - Criar JS para verificar campos do form
+    - Criar JS para verificar campos do form @done
     - testar email repetido @done
     - testar e-mail novo @done
     - criar connect do bd @done
     - Detalhes: a verificação de e-mail é feita via ajax controlada por um script JS inscrito no arquivo index.html
-Criar Ajax para salvasr dados após o index
+- Criar Definição de Grupo e Sequência
+- criar página de intruções pré-treino RB
+- Criar Teste Ruído Branco
+- criar página de intruções pré-exibição
+- Criar Interface de Exibição dos 12 áudios
+- Criar página de intruções pré-treino
+- Criar interface de Treino 12 audios
+- Criar página de intruções pré-treino
+- Criar Teste imediato
+- Criar encaminhamento para Questionário 1
+- Criar página de coleta de e-mail
+- Criar ajax de verificação de e-mail
+- Criar teste 24h
+- Criar encaminhamento para Questionário 2
