@@ -118,17 +118,47 @@ if($grupo == 3){
     //     $totalG3 = (int)$d['tanto'];
     // }
 
-    echo "<pre>";
-    var_dump($grupo2seqs);
-    echo "</pre>";
-    // if($grupo == 1){
-
-    // } elseif($grupo == 2){
-
-    // }
+    // echo "<pre>";
+    // var_dump($grupo2seqs);
+    // echo "</pre>";
+    if($grupo == 1){
+        echo "<pre>";
+        var_dump($grupo1seqs);
+        echo "</pre>";
+        if(!isset($grupo1seqs[1])){
+            $seqcod = 1;
+        } elseif(!isset($grupo1seqs[2])){
+            $seqcod = 2;
+        } elseif(!isset($grupo1seqs[3])){
+            $seqcod = 3;
+        } else{
+            asort($grupo1seqs);
+            foreach($grupo1seqs as $chave => $valor){
+                $seqcod = (int)$chave;
+                break;
+            }
+        }
+    } elseif($grupo == 2){
+        echo "<pre>";
+        var_dump($grupo2seqs);
+        echo "</pre>";
+        if(!isset($grupo2seqs[1])){
+            $seqcod = 1;
+        } elseif(!isset($grupo2seqs[2])){
+            $seqcod = 2;
+        } elseif(!isset($grupo2seqs[3])){
+            $seqcod = 3;
+        } else{
+            asort($grupo2seqs);
+            foreach($grupo2seqs as $chave => $valor){
+                $seqcod = (int)$chave;
+                break;
+            }
+        }
+    }
 
 }
-// var_dump($grupo);
+ echo "<br>Sequencia: $seqcod";
 
 // if($totalG1 <= $totalG2 && $totalG1 <= $totalG3){
 //     $grupo = 1;
