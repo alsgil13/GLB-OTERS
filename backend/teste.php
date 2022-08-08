@@ -88,7 +88,7 @@ $totais = [
 
 ];
 
-$filtro = array_column($data, 'tanto');
+$filtro = array_column($totais, 'tanto');
 
 array_multisort($totais, SORT_ASC, $filtro);
 //usort($totais,'DescSort');
