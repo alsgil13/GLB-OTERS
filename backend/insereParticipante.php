@@ -22,7 +22,7 @@ if(isset($_COOKIE["dispositivo"])){
     $msg .= "\nDispositivo não encontrado nos arquivos do navegador";
 }
 
-$insert = "INSERT INTO lpactm_data 
+$insert = "INSERT INTO lpactm_data_2 
 (nome, email, dispositivo) VALUES ('$nome','$email','$dispositivo');";
 
 $stmt= $conn->prepare($insert);
