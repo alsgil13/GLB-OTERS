@@ -78,3 +78,30 @@ while($d = $stmt->fetch(PDO::FETCH_ASSOC)){
 
 }
 echo "<br>Total grupo 3: $totalG3";
+
+
+//define os grupos
+$totais = [
+    "1" => $totalG1,
+    "2" => $totalG2,
+    "3" => $totalG3
+];
+
+usort($totais,'DescSort');
+
+echo "<pre>";
+var_dump($totais);
+echo "</pre>";
+//echo "<br>Total grupo 2: $totalG2";
+
+// if($totalG1 <= $totalG2 && $totalG1 <= $totalG3){
+//     $grupo = 1;
+// }
+
+// if($totalG2 <= $totalG1 && $totalG2 <= $totalG3){
+//     $grupo = 2;
+// }
+
+// if($totalG3 <= $totalG1 && $totalG3 <= $totalG2){
+//     $grupo = 3;
+// }
