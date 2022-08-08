@@ -100,8 +100,8 @@ echo "<pre>";
 var_dump($totais);
 echo "</pre>";
 
-$grupo = (int)$totais[0];
-echo "<br>Grupo: $grupo<br>";
+//$grupo = (int)$totais[0];
+//echo "<br>Grupo: $grupo<br>";
 // var_dump($grupo);
 
 // if($totalG1 <= $totalG2 && $totalG1 <= $totalG3){
