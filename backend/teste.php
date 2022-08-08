@@ -100,7 +100,7 @@ echo "<pre>";
 var_dump($totais);
 echo "</pre>";
 
-$grupo = (int)$totais[0]['nome'];
+$grupo = (int)$totais[0];
 echo "<br>Grupo: $grupo<br>";
 // var_dump($grupo);
 
