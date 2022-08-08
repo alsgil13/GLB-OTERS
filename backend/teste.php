@@ -72,10 +72,7 @@ $stmt= $conn->prepare($select_grupo3);
 $stmt->execute();
 $totalG3 = 0;
 while($d = $stmt->fetch(PDO::FETCH_ASSOC)){
-    //array_push($dados, $d);
     $totalG3 = (int)$d['tanto'];
-    //coleta a quantidade de sequências do grupo 2
-
 }
 echo "<br>Total grupo 3: $totalG3";
 
@@ -83,9 +80,6 @@ echo "<br>Total grupo 3: $totalG3";
 //define os grupos
 
 $totais = [
-    // array('nome' => '1', 'tanto' => $totalG1),
-    // array('nome' => '2', 'tanto' => $totalG2),
-    // array('nome' => '3', 'tanto' => $totalG3)
     "1" => $totalG1,
     "2" => $totalG2,
     "3" => $totalG3
@@ -107,6 +101,33 @@ echo "</pre>";
 
 //$grupo = (int)$totais[0];
 echo "<br>Grupo: $grupo<br>";
+
+
+//Define a sequência
+if($grupo == 3){
+    $seqcod = 1;
+} else {
+    //Buscar sequências no banco
+    // $select_seq = "SELECT seqcod, COUNT(seqcod) as tanto FROM lpactm_data_2 WHERE grupo = $grupo GROUP BY (seqcod) ORDER BY tanto DESC;";
+    // $stmt= $conn->prepare($select_seq);
+    // $stmt->execute();
+    // //$totalG3 = 0;
+    // $seqs = [];
+    // while($d = $stmt->fetch(PDO::FETCH_ASSOC)){
+        
+    //     $totalG3 = (int)$d['tanto'];
+    // }
+
+    echo "<pre>";
+    var_dump($grupo2seqs);
+    echo "</pre>";
+    // if($grupo == 1){
+
+    // } elseif($grupo == 2){
+
+    // }
+
+}
 // var_dump($grupo);
 
 // if($totalG1 <= $totalG2 && $totalG1 <= $totalG3){
