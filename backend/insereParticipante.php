@@ -113,7 +113,8 @@ foreach($totais as $chave => $valor){
 //Define a sequência
 if($grupo == 3){
     $seqcod = 1;
-    $sequencia = '["a","b","c"]';
+    $sequencia =        '["vhabex.mp3",	"vhnaebx.mp3",	"vhadz.mp3",	"vhnasffz.mp3",	"vhaedz.mp3",	"vhabex.mp3",	"vhnaax.mp3",	"vhadz.mp3",	"vhnasffz.mp3",	"vhaedz.mp3",	"vhnaebx.mp3",	"vhnaax.mp3"]';
+    $sequencia_cores =  '["VERDE",	    "VERDE",	    "AZUL",	        "AZUL",	        "VERDE",	    "AZUL",	        "AZUL",	        "VERDE",	    "VERDE",	    "AZUL",	        "VERDE",	    "AZUL"]';
 } else {
     //Buscar sequência
     if($grupo == 1){
@@ -149,9 +150,10 @@ if($grupo == 3){
 }
 
 $array_sequencias = [
-    1 => '["a","b","c"]',
-    2 => '["c","b","a"]',
-    3 => '["a","c","b"]'
+    1 => ["vhawz.mp3",	"vhapx.mp3", 	"vhnahx.mp3", 	"vhnahpz.mp3", 	"vhagtx.mp3", 	"vhnaivz.mp3", 	"vhaggx.mp3", 	"vhaifz.mp3",	"vhnaivz.mp3",	"vhnahpx.mp3",	"vhacsz.mp3",	"vhnadsz.mp3"],
+    2 => ["vhapx.mp3",	"vhnahpz.mp3", 	"vhaifz.mp3", 	"vhagtx.mp3", 	"vhnaivz.mp3", 	"vhnaivz.mp3", 	"vhaggx.mp3", 	"vhnahpx.mp3",	"vhacsz.mp3",	"vhawz.mp3",	"vhnadsz.mp3",	"vhnahx.mp3"],
+    3 => ["vhnahx.mp3",	"vhapx.mp3", 	"vhnahpz.mp3", 	"vhnaivz.mp3", 	"vhaifz.mp3", 	"vhagtx.mp3", 	"vhnaivz.mp3", 	"vhnahpx.mp3",	"vhaggx.mp3",	"vhnadsz.mp3",	"vhacsz.mp3",	"vhawz.mp3"]
+
 ];
 
 $sequencia = $array_sequencias[$seqcod];
