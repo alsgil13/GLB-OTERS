@@ -149,10 +149,11 @@ if($grupo == 3){
 
 }
 
+//problemas na sequência 1 e 3, aguardando resposta
 $array_sequencias = [
-    1 => '["vhawz.mp3",	"vhapx.mp3", 	"vhnahx.mp3", 	"vhnahpz.mp3", 	"vhagtx.mp3", 	"vhnaivz.mp3", 	"vhaggx.mp3", 	"vhaifz.mp3",	"vhnaivz.mp3",	"vhnahpx.mp3",	"vhacsz.mp3",	"vhnadsz.mp3"]',
-    2 => '["vhapx.mp3",	"vhnahpz.mp3", 	"vhaifz.mp3", 	"vhagtx.mp3", 	"vhnaivz.mp3", 	"vhnaivz.mp3", 	"vhaggx.mp3", 	"vhnahpx.mp3",	"vhacsz.mp3",	"vhawz.mp3",	"vhnadsz.mp3",	"vhnahx.mp3"]',
-    3 => '["vhnahx.mp3",	"vhapx.mp3", 	"vhnahpz.mp3", 	"vhnaivz.mp3", 	"vhaifz.mp3", 	"vhagtx.mp3", 	"vhnaivz.mp3", 	"vhnahpx.mp3",	"vhaggx.mp3",	"vhnadsz.mp3",	"vhacsz.mp3",	"vhawz.mp3"'
+    1 => '["vhawz.mp3",	    "vhapx.mp3", 	"vhnahx.mp3", 	"vhnahpz.mp3", 	"vhagtx.mp3", 	"vhnaivz.mp3", 	"vhaggx.mp3", 	"vhaifz.mp3",	"vhnaivz.mp3",	"vhnahpx.mp3",	"vhacsz.mp3",	"vhnadsz.mp3"]',
+    2 => '["vhapx.mp3",	    "vhnahpz.mp3", 	"vhaifz.mp3", 	"vhagtx.mp3", 	"vhnaivz.mp3", 	"vhnaivz.mp3", 	"vhaggx.mp3", 	"vhnahpx.mp3",	"vhacsz.mp3",	"vhawz.mp3",	"vhnadsz.mp3",	"vhnahx.mp3"]',
+    3 => '["vhnahx.mp3",    "vhapx.mp3", 	"vhnahpz.mp3", 	"vhnaivz.mp3", 	"vhaifz.mp3", 	"vhagtx.mp3", 	"vhnaivz.mp3", 	"vhnahpx.mp3",	"vhaggx.mp3",	"vhnadsz.mp3",	"vhacsz.mp3",	"vhawz.mp3"]'
 ];
 
 $sequencia = $array_sequencias[$seqcod];
@@ -162,3 +163,11 @@ $insert = "INSERT INTO lpactm_data_2
 
 $stmt= $conn->prepare($insert);
 $stmt->execute();
+
+//Salvar em cookies
+
+    //grupo
+
+    //sequencia
+
+    //se grupo 3: sequencia cores

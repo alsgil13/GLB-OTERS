@@ -163,7 +163,7 @@ function insereParticipante(){
                 //Não deu certo, exibir mensagem de erro.
                 window.alert(result);
             } else {
-                //Ok Deu certo, encaminha para o treino de ruído branco
+                //Ok Deu certo, encaminha para o treino de ruído branco ou Exibição de audios - aguardando resposta
                 setTimeout(function() {
                     // window.location.href = "tocaAudioTreino.html";
                     window.location.href = "intrucoes.html";
