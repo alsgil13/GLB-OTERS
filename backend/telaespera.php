@@ -118,7 +118,7 @@ foreach($lista_de_biscoitos as $c){
     if(isset($_COOKIE[$c])){
         //verificar tipo de dado
         if (strpos($c, '_test_')) {
-            $update .= $desambigBD[$c] . " = " . $_COOKIE[$c] . ", "; 
+            $update .= $c . " = " . $_COOKIE[$c] . ", "; 
         } else {
             $update .= $desambigBD[$c] . " = '" . $_COOKIE[$c]. "', ";
             //$dado = "'" . $_COOKIE[$c] . "'"; //false
