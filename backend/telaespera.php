@@ -94,7 +94,7 @@ $desambigBD = [
     "Cor_6"      => "cor_audio_6",
 
     "Audio_7"    => "file_audio_7",
-    "Cor_7"      => "cor_audio_",
+    "Cor_7"      => "cor_audio_7",
 
     "Audio_8"    => "file_audio_8",
     "Cor_8"      => "cor_audio_8",
