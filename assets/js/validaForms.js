@@ -440,7 +440,7 @@ function reproduzTr(){
     // var audioTag = document.getElementById('player');
     // audioTag.src = "assets/estimulos/" + track;
     // audioTag.load();
-    document.getElementById("ciruclo").setAttribute("fill",corRGB);
+    document.getElementById("circulo").setAttribute("fill",corRGB);
 
 }
 
