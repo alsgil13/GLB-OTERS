@@ -159,7 +159,7 @@ $array_sequencias = [
 ];
 
 if($grupo != 3){
-    $sequencia = $array_sequencias[$seqcod];
+    $sequencia = $array_sequencias[$seqcod];LPACTM2
 }
 
 
@@ -179,20 +179,20 @@ for($i=0;$i<count($sequencia);$i++){
     $nome_a = "Audio_" . ($i+1);
     $nome_c = "Cor_" . ($i+1);
     //setcookie($nome,$sequencia[$i], time() + 60*60*24*30, '/');
-    setcookie($nome_a, "", time() - 3600, '/');
-    setcookie($nome_c, "", time() - 3600, '/');
+    setcookie($nome_a, "", time() - 3600, '/LPACTM2');
+    setcookie($nome_c, "", time() - 3600, '/LPACTM2');
 
 }
 
 //grupo
-setcookie("grupo",$grupo, time() + 60*60*24*30, '/');
+setcookie("grupo",$grupo, time() + 60*60*24*30, '/LPACTM2');
 //sequencia
 
 //setcookie("sequencia",arrayToString($sequencia), time() + 60*60*24*30, '/');
 
 for($i=0;$i<count($sequencia);$i++){
     $nome = "Audio_" . ($i+1);
-    setcookie($nome,$sequencia[$i], time() + 60*60*24*30, '/');
+    setcookie($nome,$sequencia[$i], time() + 60*60*24*30, '/LPACTM2');
 
 }
 
