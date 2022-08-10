@@ -1,10 +1,11 @@
 <?php
 
 function arrayToString($array){
-    $string = '';
+    $string = ']';
     foreach($array as $a){
         $string .= '"'.$a.'",';
     }
     $string = substr($string,0,-1);
+    $string .= "]";
     return $string;
 }
