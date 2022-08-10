@@ -304,7 +304,7 @@ function testAudio(status){
         var iter_count = iter;
         document.cookie = status + "_test_audio_"+iter_count+"="+tempoAtual+";";
         //Atualiza iteração
-        iter++;
+        //iter++;
         document.cookie = "iteracao="+iter+";";
     }
 
