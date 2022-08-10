@@ -113,7 +113,7 @@ $desambigBD = [
 ];
 
 
-$update = "UPDATE lpactm_data SET ";
+$update = "UPDATE lpactm_data_2 SET ";
 foreach($lista_de_biscoitos as $c){
     if(isset($_COOKIE[$c])){
         //verificar tipo de dado
