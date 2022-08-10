@@ -183,7 +183,7 @@ if($msg!=""){
     header("Location: index.php"); 
     exit();
 } else {
-    header("Location: intrucoesExibeAudio.html"); 
+    header("Location: ../intrucoesExibeAudio.html"); 
     exit();
 
 }
