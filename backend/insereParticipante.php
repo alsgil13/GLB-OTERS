@@ -161,16 +161,19 @@ $array_sequencias = [
 $sequencia = $array_sequencias[$seqcod];
 
 $insert = "INSERT INTO lpactm_data_2 
-(nome, email, dispositivo, grupo, seqcod, sequencia) VALUES ('$nome', '$email', '$dispositivo', $grupo, $seqcod, '$sequencia');";
+(nome, email, dispositivo, grupo, seqcod, sequencia) VALUES ('$nome', '$email', '$dispositivo', $grupo, $seqcod, '".arrayToString($sequencia)."');";
 
 $stmt= $conn->prepare($insert);
 $stmt->execute();
 
-echo arrayToString($sequencia);
+//echo arrayToString($sequencia);
 //Salvar em cookies
 
     //grupo
-
+    setcookie("grupo",$grupo);
     //sequencia
-
+    setcookie("sequencia",arrayToString($sequencia));
     //se grupo 3: sequencia cores
+    if($grupo == 3){
+        setcookie("sequencia_cores",arrayToString($sequencia_cores));
+    }
