@@ -159,7 +159,7 @@ $array_sequencias = [
 ];
 
 if($grupo != 3){
-    $sequencia = $array_sequencias[$seqcod];LPACTM2
+    $sequencia = $array_sequencias[$seqcod];
 }
 
 
