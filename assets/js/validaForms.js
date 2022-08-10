@@ -325,10 +325,58 @@ function iniciarTesteRB(){
         }, 100);
         
     } else{
+        document.cookie  = "iteracao=0;";
         setTimeout(function() {
             window.location.href = "exibeAudioTr.html";
         }, 100);
     }
 
 // }
+}
+
+
+
+function exibeAudioTr(){
+    var iteracao = parseInt(getCookie("iteracao"));
+    iteracao = iteracao + 1;
+    document.cookie  = "iteracao=" + iteracao + ";";
+
+    if(iteracao > 12){
+        window.location.href = "backend/telaEspera.php";
+    }
+    grupo = parseInt(getCookie('grupo'));
+
+    //define track
+    nm_cok_aud = "Audio_" + iteracao;
+    track = getCookie(nm_cok_aud);
+    //define cor do audio
+    nm_cok_cor = "Cor_" + iteracao;
+    if(grupo == 3){
+        corCirculo = getCookie(nm_cok_cor);
+    } else {
+        if(grupo == 1){
+            //Define cor baseado no audio
+            if(track.includes('vhna')){ // não agradavel 
+                corCirculo = "VERDE";
+            } else {
+                corCirculo = "AZUL";
+            }
+        } else if(grupo == 2){
+            //Define cor baseado no audio
+            if(track.includes('vhna')){ // não agradavel 
+                corCirculo = "AZUL";
+            } else {
+                corCirculo = "VERDE";
+            }            
+        }
+        document.cookie  = nm_cok_cor + "=" + corCirculo + ";";
+    }
+    corRGB = getRGB(corCirculo);
+
+
+    var audioTag = document.getElementById('player');
+    audioTag.src = "assets/estimulos/" + track;
+    audioTag.load();
+    document.getElementById("ciruclo").setAttribute("fill",corRGB);
+
 }
