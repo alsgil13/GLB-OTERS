@@ -166,7 +166,7 @@ function insereParticipante(){
                 //Ok Deu certo, encaminha para o treino de ruído branco ou Exibição de audios - aguardando resposta
                 setTimeout(function() {
                     // window.location.href = "tocaAudioTreino.html";
-                    window.location.href = "intrucoes.html";
+                    window.location.href = "intrucoesExibeAudio.html";
                 }, 100);
 
             }
