@@ -112,7 +112,7 @@ function getAllCookies(){
 function zeraTudo(){
     var cookies = getAllCookies();
     for(var name in cookies) {
-        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC;'/'";
     }
 }
 
