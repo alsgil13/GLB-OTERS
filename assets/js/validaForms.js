@@ -1,5 +1,16 @@
 /************************ Funções Auxiliares ******************************************************** */
 
+
+function getRGB(cor){
+    switch(cor){
+        case "VERDE":
+            return("rgb(32,97,64)");
+            break;
+        case "AZUL":
+            return("rgb(19,94,107)");
+            break;
+    }
+}
 function desativaBack(){
     history.pushState(null, null, document.URL);
     window.addEventListener('popstate', function () {
@@ -150,34 +161,72 @@ function insereParticipante(){
 
 
         setTimeout(function() {
-            // window.location.href = "tocaAudioTreino.html";
             window.location.href = "backend/insereParticipante.php";
         }, 100);
-        //Ajax Salva no BD
-
-        //var email = $('#email').val();
-        // var url_ajax = "backend/insereParticipante.php";
-
-        // $.ajax({
-        //     type: "GET",
-        //     url: url_ajax,
-        //     data: ""
-        // }).done(function (result) {
-            
-        //     if(result!= ""){
-        //         //Não deu certo, exibir mensagem de erro.
-        //         window.alert(result);
-        //     } else {
-        //         //Ok Deu certo, encaminha para o treino de ruído branco ou Exibição de audios - aguardando resposta
-        //         setTimeout(function() {
-        //             // window.location.href = "tocaAudioTreino.html";
-        //             window.location.href = "intrucoesExibeAudio.html";
-        //         }, 100);
-
-        //     }
-        // });
-
-        //Encaminha página
+ 
 
     }
+}
+
+function exibeAudio(){
+    $iteracao_existe = document.cookie.indexOf('iteracao=');
+    if($iteracao_existe==-1){
+        document.cookie  = "iteracao=1;";
+    } else {
+        var iteracao = parseInt(getCookie("iteracao"));
+        iteracao = iteracao + 1;
+        document.cookie  = "iteracao=" + iteracao + ";";
+    }
+
+    grupo = parseInt(getCookie(grupo));
+
+    //define track
+    nm_cok_aud = "Audio_" + iteracao;
+    track = getCookie(nm_cok_aud);
+    //define cor do audio
+    if(grupo == 3){
+        nm_cok_cor = "Cor_" + iteracao;
+        corCirculo = getCookie(nm_cok_cor);
+        
+    } else {
+        if(grupo == 1){
+            //Define cor baseado no audio
+            if(track.includes('vhna')){ // não agradavel 
+                corCirculo = "VERDE";
+            } else {
+                corCirculo = "AZUL";
+            }
+        } else if(grupo == 2){
+            //Define cor baseado no audio
+            if(track.includes('vhna')){ // não agradavel 
+                corCirculo = "AZUL";
+            } else {
+                corCirculo = "VERDE";
+            }            
+        }
+    }
+    corRGB = getRGB(corCirculo);
+
+
+    var audioTag = document.getElementById('player');
+    audioTag.src = track;
+    audioTag.load();
+    document.getElementById("ciruclo").setAttribute("fill",corCirculo);
+
+}
+
+function tocaAudio(){
+    var delayInMilliseconds = 20000; //20 segundos
+    var grupo = parseInt(getCookie("grupo"));
+    // if( grupo != 3 ){
+    document.getElementById('player').play()
+    // }
+    
+    document.getElementById('btn-play').disabled = true;
+    document.getElementById("svg").classList.remove('invisivel');
+    
+    setTimeout(function() {
+        document.getElementById('btn-prox').disabled = false;
+        document.getElementById("svg").classList.add('invisivel');
+      }, delayInMilliseconds);
 }

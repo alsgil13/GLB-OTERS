@@ -199,6 +199,5 @@ if($msg!=""){
     header("Location: ../intrucoesExibeAudio.html"); 
     //exit();
     //var_dump($sequencia);
-
 }
 //echo $msg;
