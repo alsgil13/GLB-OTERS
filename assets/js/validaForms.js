@@ -311,7 +311,8 @@ function testAudio(status){
 }
 
 
-function iniciarTeste(){
+//Controla o reencaminhamento após o treino de ruído branco
+function iniciarTesteRB(){
 
     console.log("Cokies atualmente em memória: ");
     mostraCookies();
