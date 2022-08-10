@@ -337,9 +337,22 @@ function iniciarTesteRB(){
 
 
 function exibeAudioTr(){
+
+
+    
+    
+
     var iteracao = parseInt(getCookie("iteracao"));
-    iteracao = iteracao + 1;
-    document.cookie  = "iteracao=" + iteracao + ";";
+    //Verifica se não foi refresh (vendo se os cookies do teste anterior estão salvos)
+    //$iteracao_existe = document.cookie.indexOf('iteracao=');
+    $iae = document.cookie.indexOf('ini_test_audio_' + iteracao + '='); // ini anterior existe?
+    $fae = document.cookie.indexOf('fim_test_audio_' + iteracao + '='); // fim anterior existe?
+    if( iteracao > 1 && $iae > -1 && $fae > -1){
+        iteracao = iteracao + 1;
+        document.cookie  = "iteracao=" + iteracao + ";";
+    }
+
+
 
     if(iteracao > 12){
         window.location.href = "backend/telaEspera.php";

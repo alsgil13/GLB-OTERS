@@ -136,7 +136,7 @@ $update = substr($update, 0, -2);
 $update .= " WHERE email = '$email';";
 
 
-echo "<br>" . $update . "<br>";
+//echo "<br>" . $update . "<br>";
 
 $stmt= $conn->prepare($update);
 $stmt->execute();
@@ -159,7 +159,7 @@ $stmt->execute();
 <link rel="icon" href="favicon.ico">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/style.css">
 <title>Laboratório de Processos Associativos, Controle Temporal e Memória</title>
 </head>
 <body onload="telaEspera()">
@@ -170,6 +170,7 @@ $stmt->execute();
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <br><br><br><br>
             <h1>Teste experimental</h1>
+            <p class="text-center"><small>Aguarde e você será redirecionado para a próxima etapa</small></p>
         </div>
     </div>
 
