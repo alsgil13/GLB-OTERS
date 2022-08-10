@@ -178,6 +178,9 @@ function exibeAudio(){
         document.cookie  = "iteracao=" + iteracao + ";";
     }
 
+    if(iteracao > 12){
+        window.location.href = "treinoRB.html";
+    }
     grupo = parseInt(getCookie(grupo));
 
     //define track
