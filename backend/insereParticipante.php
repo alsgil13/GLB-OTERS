@@ -25,7 +25,7 @@ if(isset($_COOKIE["dispositivo"])){
 
 
 
-// echo $msg;
+
 
 //Define grupos e sequência
 $select_grupo1 = "SELECT seqcod, COUNT(seqcod) as tanto FROM lpactm_data_2 WHERE grupo = 1 GROUP BY seqcod ORDER BY tanto ASC;";
@@ -166,14 +166,16 @@ $insert = "INSERT INTO lpactm_data_2
 $stmt= $conn->prepare($insert);
 $stmt->execute();
 
-//echo arrayToString($sequencia);
+
 //Salvar em cookies
 
-    //grupo
-    setcookie("grupo",$grupo);
-    //sequencia
-    setcookie("sequencia",arrayToString($sequencia));
-    //se grupo 3: sequencia cores
-    if($grupo == 3){
-        setcookie("sequencia_cores",arrayToString($sequencia_cores));
-    }
+//grupo
+setcookie("grupo",$grupo);
+//sequencia
+setcookie("sequencia",arrayToString($sequencia));
+//se grupo 3: sequencia cores
+if($grupo == 3){
+    setcookie("sequencia_cores",arrayToString($sequencia_cores));
+}
+
+echo $msg;
