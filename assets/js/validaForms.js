@@ -172,12 +172,14 @@ function insereParticipante(){
 function exibeAudio(){
     $iteracao_existe = document.cookie.indexOf('iteracao=');
     if($iteracao_existe==-1){
-        document.cookie  = "iteracao=1;";
+        //document.cookie  = "iteracao=1;";
+        iteracao = 1;
     } else {
         var iteracao = parseInt(getCookie("iteracao"));
         iteracao = iteracao + 1;
-        document.cookie  = "iteracao=" + iteracao + ";";
+        
     }
+    document.cookie  = "iteracao=" + iteracao + ";";
 
     if(iteracao > 12){
         window.location.href = "treinoRB.html";
