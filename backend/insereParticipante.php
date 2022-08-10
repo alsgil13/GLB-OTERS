@@ -172,10 +172,23 @@ $stmt->execute();
 //grupo
 setcookie("grupo",$grupo, time() + 60*60*24*30, '/');
 //sequencia
-setcookie("sequencia",arrayToString($sequencia), time() + 60*60*24*30, '/');
+
+//setcookie("sequencia",arrayToString($sequencia), time() + 60*60*24*30, '/');
+
+for($i=0;$i<count($sequencia);$i++){
+    $nome = "Audio_" . ($i+1);
+    setcookie($nome,$sequencia[$i], time() + 60*60*24*30, '/');
+
+}
+
 //se grupo 3: sequencia cores
 if($grupo == 3){
-    setcookie("sequencia_cores",addslashes(arrayToString($sequencia_cores)), time() + 60*60*24*30, '/');
+    //setcookie("sequencia_cores",addslashes(arrayToString($sequencia_cores)), time() + 60*60*24*30, '/');
+    for($i=0;$i<count($sequencia);$i++){
+        $nome = "Cor_" . ($i+1);
+        setcookie($nome,$sequencia_cores[$i], time() + 60*60*24*30, '/');
+    
+    }
 }
 
 if($msg!=""){
