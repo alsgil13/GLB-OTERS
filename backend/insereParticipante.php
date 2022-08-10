@@ -175,7 +175,7 @@ setcookie("grupo",$grupo, time() + 60*60*24*30, '/');
 setcookie("sequencia",arrayToString($sequencia), time() + 60*60*24*30, '/');
 //se grupo 3: sequencia cores
 if($grupo == 3){
-    setcookie("sequencia_cores",arrayToString($sequencia_cores), time() + 60*60*24*30, '/');
+    setcookie("sequencia_cores",addslashes(arrayToString($sequencia_cores)), time() + 60*60*24*30, '/');
 }
 
 if($msg!=""){
