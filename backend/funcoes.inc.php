@@ -1,7 +1,7 @@
 <?php
 
 function arrayToString($array){
-    $string = ']';
+    $string = '[';
     foreach($array as $a){
         $string .= '"'.$a.'",';
     }
