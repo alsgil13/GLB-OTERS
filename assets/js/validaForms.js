@@ -309,3 +309,25 @@ function testAudio(status){
     }
 
 }
+
+
+function iniciarTeste(){
+
+    console.log("Cokies atualmente em memória: ");
+    mostraCookies();
+    var it = parseInt(getCookie("i-treino"));
+    it++;
+    if(it < 2){
+        document.cookie = "i-treino="+it+";";
+        setTimeout(function() {
+            window.location.href = "RBexibe.html";
+        }, 100);
+        
+    } else{
+        setTimeout(function() {
+            window.location.href = "exibeAudioTr.html";
+        }, 100);
+    }
+
+// }
+}
