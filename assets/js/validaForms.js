@@ -447,6 +447,6 @@ function reproduzTr(){
 
 function telaEspera(){
     setTimeout(function() {
-        window.location.href = "../reproduzTsI.html";
+        window.location.href = "../instrucoesTsI.html";
     }, 20000);
 }

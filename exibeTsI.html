@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="icon" href="favicon.ico">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Laboratório de Processos Associativos, Controle Temporal e Memória</title>
+</head>
+<body onload="exibeTsI()">
+
+<div class="container">
+    
+    
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <br><br><br>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="caixa-circ d-flex justify-content-center">
+                <svg id="svg" height="35vw" width="35vw" class="invisivel">
+                    <circle id="ciruclo" cx="17vw" cy="17vw" r="14vw" stroke="none" stroke-width="3" fill="" />
+                  </svg> 
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="d-flex justify-content-center">
+                <button id="btn-play" onclick="tocaCirculo()">Iniciar a apresentação do estímulo</button>
+              <!-- <audio id="player"  >
+                <source id="player_src" src="" type="audio/mp3" />
+                seu navegador não suporta HTML5
+              </audio> -->
+            </div>
+        </div>
+    </div>
+ 
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="d-flex justify-content-center">
+                <button id="btn-prox" onclick='window.location.href = "reproduzTsI.html"' disabled>Próximo</button>
+            </div>
+        </div>
+    </div>
+    
+    
+</div>
+<script>
+    history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function () {
+        history.pushState(null, null, document.URL);
+    });
+</script>
+<script src="assets/js/validaForms.js?v=2"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
