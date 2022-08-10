@@ -173,5 +173,5 @@ $stmt->execute();
     //grupo
 
     //sequencia
-
+    
     //se grupo 3: sequencia cores
