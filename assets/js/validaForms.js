@@ -427,3 +427,10 @@ function reproduzTr(){
     document.getElementById("ciruclo").setAttribute("fill",corRGB);
 
 }
+
+
+function telaEspera(){
+    setTimeout(function() {
+        window.location.href = "../reproduzTsI.html";
+    }, 20000);
+}
