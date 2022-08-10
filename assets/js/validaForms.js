@@ -212,7 +212,7 @@ function exibeAudio(){
 
 
     var audioTag = document.getElementById('player');
-    audioTag.src = track;
+    audioTag.src = "assets/estimulos/" + track;
     audioTag.load();
     document.getElementById("ciruclo").setAttribute("fill",corCirculo);
 
