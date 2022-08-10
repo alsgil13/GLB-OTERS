@@ -183,8 +183,9 @@ if($msg!=""){
     header("Location: ../index.php"); 
     exit();
 } else {
-    header("Location: ../intrucoesExibeAudio.html"); 
-    exit();
+    //header("Location: ../intrucoesExibeAudio.html"); 
+    //exit();
+    var_dump($sequencia);
 
 }
 //echo $msg;
