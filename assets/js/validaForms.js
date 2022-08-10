@@ -292,7 +292,7 @@ function testAudio(status){
         document.getElementById('btn-tst-play').disabled = true;
         document.getElementById('btn-tst-stop').disabled = false;
         var iter = parseInt(getCookie("iteracao"));
-        var iter_count = iter + 1;
+        var iter_count = iter;
         document.cookie = status + "_test_audio_"+iter_count+"="+tempoAtual+";";
     }
 
@@ -301,7 +301,7 @@ function testAudio(status){
         document.getElementById('btn-tst-stop').disabled = true;
         document.getElementById('btn-prox').disabled = false;
         var iter = parseInt(getCookie("iteracao"));
-        var iter_count = iter + 1;
+        var iter_count = iter;
         document.cookie = status + "_test_audio_"+iter_count+"="+tempoAtual+";";
         //Atualiza iteração
         iter++;
