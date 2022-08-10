@@ -136,10 +136,12 @@ $update = substr($update, 0, -2);
 $update .= " WHERE email = '$email';";
 
 
+echo "<br>" . $update . "<br>";
+
 $stmt= $conn->prepare($update);
 $stmt->execute();
 
-echo "<br>" . $update . "<br>";
+
 
 ?>
 
