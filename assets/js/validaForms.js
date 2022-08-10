@@ -190,10 +190,9 @@ function exibeAudio(){
     nm_cok_aud = "Audio_" + iteracao;
     track = getCookie(nm_cok_aud);
     //define cor do audio
+    nm_cok_cor = "Cor_" + iteracao;
     if(grupo == 3){
-        nm_cok_cor = "Cor_" + iteracao;
         corCirculo = getCookie(nm_cok_cor);
-        
     } else {
         if(grupo == 1){
             //Define cor baseado no audio
