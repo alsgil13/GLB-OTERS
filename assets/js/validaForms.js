@@ -148,29 +148,34 @@ function insereParticipante(){
         console.log("Email Salvo. Iteração Salva. Cokies atualmente  em memória: ");
         mostraCookies();
 
+
+        setTimeout(function() {
+            // window.location.href = "tocaAudioTreino.html";
+            window.location.href = "backend/insereParticipante.php";
+        }, 100);
         //Ajax Salva no BD
 
         //var email = $('#email').val();
-        var url_ajax = "backend/insereParticipante.php";
+        // var url_ajax = "backend/insereParticipante.php";
 
-        $.ajax({
-            type: "GET",
-            url: url_ajax,
-            data: ""
-        }).done(function (result) {
+        // $.ajax({
+        //     type: "GET",
+        //     url: url_ajax,
+        //     data: ""
+        // }).done(function (result) {
             
-            if(result!= ""){
-                //Não deu certo, exibir mensagem de erro.
-                window.alert(result);
-            } else {
-                //Ok Deu certo, encaminha para o treino de ruído branco ou Exibição de audios - aguardando resposta
-                setTimeout(function() {
-                    // window.location.href = "tocaAudioTreino.html";
-                    window.location.href = "intrucoesExibeAudio.html";
-                }, 100);
+        //     if(result!= ""){
+        //         //Não deu certo, exibir mensagem de erro.
+        //         window.alert(result);
+        //     } else {
+        //         //Ok Deu certo, encaminha para o treino de ruído branco ou Exibição de audios - aguardando resposta
+        //         setTimeout(function() {
+        //             // window.location.href = "tocaAudioTreino.html";
+        //             window.location.href = "intrucoesExibeAudio.html";
+        //         }, 100);
 
-            }
-        });
+        //     }
+        // });
 
         //Encaminha página
 

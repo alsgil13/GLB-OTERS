@@ -178,4 +178,13 @@ if($grupo == 3){
     setcookie("sequencia_cores",arrayToString($sequencia_cores));
 }
 
-echo $msg;
+if($msg!=""){
+    echo "<script>window.alert(" . $msg . ");</script>";
+    header("Location: index.php"); 
+    exit();
+} else {
+    header("Location: intrucoesExibeAudio.html"); 
+    exit();
+
+}
+//echo $msg;
