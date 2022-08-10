@@ -136,7 +136,7 @@ $update = substr($update, 0, -2);
 $update .= " WHERE email = '$email';";
 
 
-$stmt= $conn->prepare($insert);
+$stmt= $conn->prepare($update);
 $stmt->execute();
 
 echo "<br>" . $update . "<br>";
