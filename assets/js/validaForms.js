@@ -388,34 +388,36 @@ function reproduzTr(){
     if(iteracao > 12){
         window.location.href = "backend/telaEspera.php";
     }
-    grupo = parseInt(getCookie('grupo'));
 
+    nm_cok_cor = "Cor_" + iteracao;
+    grupo = parseInt(getCookie('grupo'));
+    corCirculo = getCookie(nm_cok_cor);
 
     //define cor do audio
-    nm_cok_cor = "Cor_" + iteracao;
-    if(grupo == 3){
-        corCirculo = getCookie(nm_cok_cor);
-    } else {
-        //Verifica track
-        nm_cok_aud = "Audio_" + iteracao;
-        track = getCookie(nm_cok_aud);        
-        if(grupo == 1){
-            //Define cor baseado no audio
-            if(track.includes('vhna')){ // não agradavel 
-                corCirculo = "VERDE";
-            } else {
-                corCirculo = "AZUL";
-            }
-        } else if(grupo == 2){
-            //Define cor baseado no audio
-            if(track.includes('vhna')){ // não agradavel 
-                corCirculo = "AZUL";
-            } else {
-                corCirculo = "VERDE";
-            }            
-        }
-        //document.cookie  = nm_cok_cor + "=" + corCirculo + ";";
-    }
+    // 
+    // if(grupo == 3){
+    //     corCirculo = getCookie(nm_cok_cor);
+    // } else {
+    //     //Verifica track
+    //     nm_cok_aud = "Audio_" + iteracao;
+    //     track = getCookie(nm_cok_aud);        
+    //     if(grupo == 1){
+    //         //Define cor baseado no audio
+    //         if(track.includes('vhna')){ // não agradavel 
+    //             corCirculo = "VERDE";
+    //         } else {
+    //             corCirculo = "AZUL";
+    //         }
+    //     } else if(grupo == 2){
+    //         //Define cor baseado no audio
+    //         if(track.includes('vhna')){ // não agradavel 
+    //             corCirculo = "AZUL";
+    //         } else {
+    //             corCirculo = "VERDE";
+    //         }            
+    //     }
+    //     //document.cookie  = nm_cok_cor + "=" + corCirculo + ";";
+    // }
     corRGB = getRGB(corCirculo);
 
 
