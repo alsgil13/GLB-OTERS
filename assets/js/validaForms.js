@@ -402,7 +402,7 @@ function reproduzTr(){
     var iteracao = parseInt(getCookie("iteracao"));
 
     if(iteracao > 12){
-        window.location.href = "backend/telaEspera.php";
+        window.location.href = "backend/telaespera.php";
     }
 
     nm_cok_cor = "Cor_" + iteracao;
