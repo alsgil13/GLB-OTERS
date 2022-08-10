@@ -347,11 +347,11 @@ function exibeAudioTr(){
     //$iteracao_existe = document.cookie.indexOf('iteracao=');
     $iae = document.cookie.indexOf('ini_test_audio_' + iteracao + '='); // ini anterior existe?
     $fae = document.cookie.indexOf('fim_test_audio_' + iteracao + '='); // fim anterior existe?
-    if( iteracao > 1 && $iae > -1 && $fae > -1){
+    if( iteracao > 0 && $iae > -1 && $fae > -1){
         iteracao = iteracao + 1;
         document.cookie  = "iteracao=" + iteracao + ";";
     } else if(iteracao < 1){
-        iteracao = iteracao + 1;
+        iteracao = 1;
         document.cookie  = "iteracao=" + iteracao + ";";
     }
 
