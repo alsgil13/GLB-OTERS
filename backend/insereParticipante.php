@@ -201,7 +201,7 @@ if($grupo == 3){
     //setcookie("sequencia_cores",addslashes(arrayToString($sequencia_cores)), time() + 60*60*24*30, '/');
     for($i=0;$i<count($sequencia);$i++){
         $nome = "Cor_" . ($i+1);
-        setcookie($nome,$sequencia_cores[$i], time() + 60*60*24*30, '/');
+        setcookie($nome,$sequencia_cores[$i], time() + 60*60*24*30, '/LPACTM2');
     
     }
 }
