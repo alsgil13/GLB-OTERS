@@ -158,7 +158,10 @@ $array_sequencias = [
     3 => ["vhnahx.mp3",   "vhapx.mp3", 	    "vhnahpz.mp3", 	    "vhnaivz.mp3",	"vhaifz.mp3",       "vhagtx.mp3",       "vhnahpx.mp3",  "vhaggx.mp3",   "vhnanaz.mp3",  "vhnadsz.mp3",  "vhacsz.mp3",   "vhawz.mp3"],
 ];
 
-$sequencia = $array_sequencias[$seqcod];
+if($grupo != 3){
+    $sequencia = $array_sequencias[$seqcod];
+}
+
 
 $insert = "INSERT INTO lpactm_data_2 
 (nome, email, dispositivo, grupo, seqcod, sequencia) VALUES ('$nome', '$email', '$dispositivo', $grupo, $seqcod, '".arrayToString($sequencia)."');";
