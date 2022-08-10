@@ -166,8 +166,20 @@ $insert = "INSERT INTO lpactm_data_2
 $stmt= $conn->prepare($insert);
 $stmt->execute();
 
+//limpa cookies
+
+//setcookie("gfg", "", time() - 3600);
+
 
 //Salvar em cookies
+for($i=0;$i<count($sequencia);$i++){
+    $nome_a = "Audio_" . ($i+1);
+    $nome_c = "Cor_" . ($i+1);
+    //setcookie($nome,$sequencia[$i], time() + 60*60*24*30, '/');
+    setcookie($nome_a, "", time() - 3600, '/');
+    setcookie($nome_c, "", time() - 3600, '/');
+
+}
 
 //grupo
 setcookie("grupo",$grupo, time() + 60*60*24*30, '/');
