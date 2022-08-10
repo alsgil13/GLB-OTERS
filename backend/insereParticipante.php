@@ -180,7 +180,7 @@ if($grupo == 3){
 
 if($msg!=""){
     echo "<script>window.alert(" . $msg . ");</script>";
-    header("Location: index.php"); 
+    header("Location: ../index.php"); 
     exit();
 } else {
     header("Location: ../intrucoesExibeAudio.html"); 
