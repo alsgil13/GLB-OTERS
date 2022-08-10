@@ -157,7 +157,7 @@ function insereParticipante(){
         reservaDados(['email']);
         reservaDados(['nome']);
         detectar_dispositivo()
-        console.log("Email Salvo. Iteração Salva. Cokies atualmente  em memória: ");
+        console.log("Email Salvo. Iteração Salva. Cookies atualmente em memória: ");
         mostraCookies();
 
 
@@ -174,6 +174,9 @@ function exibeAudio(){
     if($iteracao_existe==-1){
         //document.cookie  = "iteracao=1;";
         iteracao = 1;
+        
+        //Define iteração do treino usada posteriormente
+        document.cookie = "i-treino=0;";
     } else {
         var iteracao = parseInt(getCookie("iteracao"));
         iteracao = iteracao + 1;
@@ -182,7 +185,7 @@ function exibeAudio(){
     document.cookie  = "iteracao=" + iteracao + ";";
 
     if(iteracao > 12){
-        window.location.href = "treinoRB.html";
+        window.location.href = "RBexibe.html";
     }
     grupo = parseInt(getCookie('grupo'));
 
@@ -235,4 +238,74 @@ function tocaAudio(){
         document.getElementById('btn-prox').disabled = false;
         document.getElementById("svg").classList.add('invisivel');
       }, delayInMilliseconds);
+}
+
+function defineParamAudioTreino(){
+    var it = parseInt(getCookie("i-treino"));
+    switch(it){
+        case 0:
+            var corCirc = 'rgb(32,97,64)'; //verde
+            break;
+        default:
+            var corCirc = 'rgb(19,94,107)'; //Azul
+            document.getElementById("teste-treino-frase-final").innerHTML = 'Vamos treinar outra vez!';
+            break;
+    }
+    document.getElementById("circulo").setAttribute("fill",corCirc);
+}
+
+function defineParamTesteTreino(){
+    var it = parseInt(getCookie("i-treino"));
+    switch(it){
+        case 0:
+            var corCirc = 'rgb(32,97,64)'; //verde
+            document.getElementById("teste-treino-frase-final").innerHTML = '';
+            break;
+        default:
+            var corCirc = 'rgb(19,94,107)'; //Azul
+            document.getElementById("teste-treino-frase-final").innerHTML = 'Vamos treinar outra vez!';
+            break;
+    }
+    document.getElementById("circulo").setAttribute("fill",corCirc);
+}
+
+
+/** Gerencia a tela de testes de percepção */
+function testAudio(status){
+    var tempoAtual = +new Date();
+
+
+    if(status==="ini-treino"){
+        document.getElementById("svg").classList.remove('invisivel');
+        document.getElementById('btn-tst-play').disabled = true;
+        document.getElementById('btn-tst-stop').disabled = false;
+    }
+
+    if(status==="fim-treino"){
+        document.getElementById("svg").classList.add('invisivel');
+        document.getElementById('btn-tst-stop').disabled = true;
+        document.getElementById('btn-prox').disabled = false;
+    }
+
+    if(status==="ini"){
+        document.getElementById("svg").classList.remove('invisivel');
+        document.getElementById('btn-tst-play').disabled = true;
+        document.getElementById('btn-tst-stop').disabled = false;
+        var iter = parseInt(getCookie("iteracao"));
+        var iter_count = iter + 1;
+        document.cookie = status + "_test_audio_"+iter_count+"="+tempoAtual+";";
+    }
+
+    if(status==="fim"){
+        document.getElementById("svg").classList.add('invisivel');
+        document.getElementById('btn-tst-stop').disabled = true;
+        document.getElementById('btn-prox').disabled = false;
+        var iter = parseInt(getCookie("iteracao"));
+        var iter_count = iter + 1;
+        document.cookie = status + "_test_audio_"+iter_count+"="+tempoAtual+";";
+        //Atualiza iteração
+        iter++;
+        document.cookie = "iteracao="+iter+";";
+    }
+
 }

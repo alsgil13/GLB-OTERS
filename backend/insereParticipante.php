@@ -110,11 +110,12 @@ foreach($totais as $chave => $valor){
     break;
 }
 
-
+//vhaedz.mp3 --Não tem
+//vhaez.mp3 -- Alterado apra esse
 //Define a sequência
 if($grupo == 3){
     $seqcod = 1;
-    $sequencia =        ["vhabex.mp3",	    "vhnaebx.mp3",	"vhnasffz.mp3",	"vhadz.mp3",	"vhaedz.mp3",	"vhnaax.mp3",	"vhabex.mp3",	"vhadz.mp3",		"vhnasffz.mp3",	"vhaedz.mp3",	"vhnaax.mp3",	"vhnaebx.mp3"];
+    $sequencia =        ["vhabex.mp3",	    "vhnaebx.mp3",	"vhnasffz.mp3",	"vhadz.mp3",	"vhaez.mp3",	"vhnaax.mp3",	"vhabex.mp3",	"vhadz.mp3",		"vhnasffz.mp3",	"vhaez.mp3",	"vhnaax.mp3",	"vhnaebx.mp3"];
     $sequencia_cores =  ["VERDE",	        "VERDE",	    "AZUL",	        "AZUL",	        "VERDE",	    "AZUL",	        "AZUL",	        "VERDE",		    "VERDE",	    "AZUL",	        "VERDE",	    "AZUL"];
 
 

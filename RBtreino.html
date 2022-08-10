@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Laboratório de Processos Associativos, Controle Temporal e Memória</title>
+</head>
+<body onload="defineParamTesteTreino()">
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h4 id='teste-treino-frase-final' class="text-center"> </h4>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <ul>
+                <li>Você irá reproduzir a duração do estímulo que você acabou de ver. </li>
+                <li>Para isso você deve apertar a tecla INÍCIO e deixar o tempo passar. </li>
+                <li>Quando você achar que o tempo que está passando for igual ao do estímulo apresentado, aperte a tecla FIM.</li>
+            </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <p>É muito importante que você não utilize nenhum recurso para contar a duração do estímulo, como contar, bater os pés, bater as mãos, etc. Isso pode interferir nos resultados do estudo.<br>
+                Ao término deste treino, você deverá clicar em Próximo, para iniciar a coleta de dados.<br>
+                Durante a coleta de dados você repetirá o procedimento de estimar a duração do estímulo 12 vezes.</p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="caixa-circ d-flex justify-content-center">
+                <svg height="35vw" width="35vw" id="svg" class="invisivel">
+                    <circle id="circulo" cx="17vw" cy="17vw" r="14vw" stroke="none" stroke-width="3" fill="" />
+                  </svg> 
+            </div>
+            
+        </div>
+    </div>
+   
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="d-flex justify-content-center">
+                <button id="btn-tst-play" class="btn-tst " onclick="testAudio('ini-treino')">Início</button>
+                <button disabled id="btn-tst-stop" class="btn-tst " onclick="testAudio('fim-treino')" >Fim</button>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="d-flex justify-content-center">
+                <button id="btn-prox" onclick='iniciarTeste()' class="" disabled>Próximo</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/validaForms.js?v=2"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
