@@ -1,6 +1,6 @@
 <?php 
 
-require_once "db/connect.php";
+require_once "../db/connect.php";
 
 $email = $_COOKIE['email'];
 $lista_de_biscoitos = [
