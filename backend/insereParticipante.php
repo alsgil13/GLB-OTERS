@@ -1,5 +1,6 @@
 <?php
 require_once "../db/connect.php";
+require_once "funcoes.inc.php";
 
 $msg = "";
 if(isset($_COOKIE["email"])){
@@ -165,6 +166,7 @@ $insert = "INSERT INTO lpactm_data_2
 $stmt= $conn->prepare($insert);
 $stmt->execute();
 
+echo arrayToString($sequencia);
 //Salvar em cookies
 
     //grupo
