@@ -210,6 +210,7 @@ function exibeAudio(){
                 corCirculo = "VERDE";
             }            
         }
+        document.cookie  = nm_cok_cor + "=" + corCirculo + ";";
     }
     corRGB = getRGB(corCirculo);
 
