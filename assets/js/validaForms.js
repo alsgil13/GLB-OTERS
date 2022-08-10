@@ -181,7 +181,7 @@ function exibeAudio(){
     if(iteracao > 12){
         window.location.href = "treinoRB.html";
     }
-    grupo = parseInt(getCookie(grupo));
+    grupo = parseInt(getCookie('grupo'));
 
     //define track
     nm_cok_aud = "Audio_" + iteracao;
