@@ -350,6 +350,9 @@ function exibeAudioTr(){
     if( iteracao > 1 && $iae > -1 && $fae > -1){
         iteracao = iteracao + 1;
         document.cookie  = "iteracao=" + iteracao + ";";
+    } else if(iteracao == 1){
+        iteracao = iteracao + 1;
+        document.cookie  = "iteracao=" + iteracao + ";";
     }
 
 
