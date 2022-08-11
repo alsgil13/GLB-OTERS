@@ -166,13 +166,34 @@ $stmt->execute();
 
 <div class="container">
     
-    <div class="row">
+    <div class="row" id='instru-espera'>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <br><br><br><br>
-            <h1>Teste experimental</h1>
-            <p class="text-center"><small>Aguarde e você será redirecionado para a próxima etapa</small></p>
+
+            <p>Vamos agora para uma nova tarefa.</p>
+            <ul>
+                <li>Clique sobre o botão virtual Iniciar a apresentação do estímulo.</li>
+                <li>Ao final da apresentação de cada estímulo, clique em Próximo.</li>
+                <li>Você irá reproduzir a duração do estímulo que acabou de ser apresentado.</li>
+                <li>Para isso você deve apertar a tecla botão virtual Iniciar a reprodução do estímulo e deixar o tempo passar.</li>
+                <li>Quando você achar que o tempo que está passando for igual ao do estímulo apresentado, aperte a tecla FIM.</li>
+            </ul>
+            <p>É muito importante que você não faça nenhuma contagem da duração do estímulo, como contar, bater os pés, bater as mãos, etc. Isso pode interferir nos resultados do estudo. Nesta fase você repetirá o procedimento de estimar a duração de cada estímulo apresentado.</p>
+
+
+            <h1 class="text-center" id="teste-exp">Teste experimental</h1>
+            <p class="text-center" id="teste-exp-sm"><small>Aguarde e você será redirecionado para a próxima etapa</small></p>
         </div>
     </div>
+
+    
+    <div class="row" id='btn-espera'>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <button onclick='carregaEspera()'>INICIAR EXIBIÇÃO</button>
+            
+        </div>
+    </div>
+    
 
     
     

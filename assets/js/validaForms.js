@@ -244,11 +244,14 @@ function defineParamAudioTreino(){
     var it = parseInt(getCookie("i-treino"));
     switch(it){
         case 0:
-            var corCirc = 'rgb(32,97,64)'; //verde
+            var corCirc = 'rgb(207,206,205)'; //Cinza
+            // var corCirc = 'rgb(32,97,64)'; //verde
             break;
         default:
-            var corCirc = 'rgb(19,94,107)'; //Azul
+            var corCirc = 'rgb(207,206,205)'; //Cinza
+            // var corCirc = 'rgb(19,94,107)'; //Azul
             document.getElementById("teste-treino-frase-final").innerHTML = 'Vamos treinar outra vez!';
+            document.getElementById("teste-treino-frase-inicial").innerHTML = '';
             break;
     }
     document.getElementById("circulo").setAttribute("fill",corCirc);
@@ -258,11 +261,11 @@ function defineParamTesteTreino(){
     var it = parseInt(getCookie("i-treino"));
     switch(it){
         case 0:
-            var corCirc = 'rgb(32,97,64)'; //verde
+            var corCirc = 'rgb(207,206,205)'; //Cinza
             document.getElementById("teste-treino-frase-final").innerHTML = '';
             break;
         default:
-            var corCirc = 'rgb(19,94,107)'; //Azul
+            var corCirc = 'rgb(207,206,205)'; //Cinza
             document.getElementById("teste-treino-frase-final").innerHTML = 'Vamos treinar outra vez!';
             break;
     }
@@ -446,7 +449,19 @@ function reproduzTr(){
 
 
 function telaEspera(){
+    // setTimeout(function() {
+    //     window.location.href = "../instrucoesTsI.html";
+    // }, 20000);
+    document.getElementById("teste-exp").innerHTML = '';
+    document.getElementById("teste-exp-sm").innerHTML = '';
+}
+
+function carregaEspera(){
+    document.getElementById("teste-exp").innerHTML = 'Teste experimental';
+    document.getElementById("teste-exp-sm").innerHTML = 'Aguarde e você será redirecionado para a próxima etapa';
+    document.getElementById("btn-espera").classList.add('invisivel');
+    document.getElementById("instru-espera").classList.add('invisivel');
     setTimeout(function() {
-        window.location.href = "../instrucoesTsI.html";
+         window.location.href = "../instrucoesTsI.html";
     }, 20000);
 }
