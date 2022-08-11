@@ -358,7 +358,7 @@ function exibeAudioTr(){
 
 
     if(iteracao > 12){
-        window.location.href = "backend/telaEspera.php";
+        window.location.href = "backend/telaespera.php";
     }
     grupo = parseInt(getCookie('grupo'));
 
