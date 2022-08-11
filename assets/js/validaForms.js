@@ -330,7 +330,7 @@ function iniciarTesteRB(){
     } else{
         document.cookie  = "iteracao=0;";
         setTimeout(function() {
-            window.location.href = "exibeAudioTr.html";
+            window.location.href = "intrucoesTr.html";
         }, 100);
     }
 
