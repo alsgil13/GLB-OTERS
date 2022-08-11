@@ -184,10 +184,11 @@ $stmt->execute();
             </p>
 
 
-            <h1 class="text-center" id="teste-exp">Aguarde</h1>
+            
             <!-- <p class="text-center" id="teste-exp-sm"><small>Aguarde e você será redirecionado para a próxima etapa</small></p> -->
         </div>
     </div>
+    <h1 class="text-center" id="teste-exp">Aguarde</h1>
 
     
     <div class="row invisivel" id='btn-espera'>
