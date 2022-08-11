@@ -449,19 +449,21 @@ function reproduzTr(){
 
 
 function telaEspera(){
-    // setTimeout(function() {
-    //     window.location.href = "../instrucoesTsI.html";
-    // }, 20000);
-    document.getElementById("teste-exp").innerHTML = '';
-    document.getElementById("teste-exp-sm").innerHTML = '';
+    setTimeout(function() {
+            // window.location.href = "../instrucoesTsI.html";
+            document.getElementById("teste-exp").innerHTML = '';
+            document.getElementById("btn-espera").classList.remove('invisivel');
+            document.getElementById("instru-espera").classList.remove('invisivel');
+    }, 20000);
+    
+    
 }
 
 function carregaEspera(){
-    document.getElementById("teste-exp").innerHTML = 'Teste experimental';
-    document.getElementById("teste-exp-sm").innerHTML = 'Aguarde e você será redirecionado para a próxima etapa';
-    document.getElementById("btn-espera").classList.add('invisivel');
-    document.getElementById("instru-espera").classList.add('invisivel');
+    // document.getElementById("teste-exp").innerHTML = 'Teste experimental';
+    // document.getElementById("teste-exp-sm").innerHTML = 'Aguarde e você será redirecionado para a próxima etapa';
+
     setTimeout(function() {
          window.location.href = "../instrucoesTsI.html";
-    }, 20000);
+    }, 20);
 }
