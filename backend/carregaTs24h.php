@@ -14,7 +14,7 @@ $select = "SELECT
             cor_audio_7,
             cor_audio_8
         FROM 
-            lpactm_data 
+            lpactm_data_2
         WHERE 
             email = '$email'; ";
 
