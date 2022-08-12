@@ -494,3 +494,13 @@ function tocaCirculo(){
         }, delayInMilliseconds
     );
 }
+
+
+function iniciaTs24h(){
+    document.cookie = "TesteDia=2;";
+    document.cookie = "iteracao=0;";
+    var email = document.getElementById("email").value;
+    reservaDados(['email']);
+    window.location.href = "backend/carregaTs24h.php";
+   
+}

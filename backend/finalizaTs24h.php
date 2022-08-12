@@ -3,22 +3,22 @@ require_once "../db/connect.php";
 
 $email = $_COOKIE['email'];
 $lista_de_biscoitos = [
-    'ini_test_audio_1' => 'ini_test_d2_audio_1',
-    'fim_test_audio_1' => 'fim_test_d2_audio_1',
-    'ini_test_audio_2' => 'ini_test_d2_audio_2',
-    'fim_test_audio_2' => 'fim_test_d2_audio_2',
-    'ini_test_audio_3' => 'ini_test_d2_audio_3',
-    'fim_test_audio_3' => 'fim_test_d2_audio_3',
-    'ini_test_audio_4' => 'ini_test_d2_audio_4',
-    'fim_test_audio_4' => 'fim_test_d2_audio_4',
-    'ini_test_audio_5' => 'ini_test_d2_audio_5',
-    'fim_test_audio_5' => 'fim_test_d2_audio_5',
-    'ini_test_audio_6' => 'ini_test_d2_audio_6',
-    'fim_test_audio_6' => 'fim_test_d2_audio_6',
-    'ini_test_audio_7' => 'ini_test_d2_audio_7',
-    'fim_test_audio_7' => 'fim_test_d2_audio_7',
-    'ini_test_audio_8' => 'ini_test_d2_audio_8',
-    'fim_test_audio_8' => 'fim_test_d2_audio_8' 
+    'ini_test_audio_1' => 'ini_test_d2_audio_9',
+    'fim_test_audio_1' => 'fim_test_d2_audio_9',
+    'ini_test_audio_2' => 'ini_test_d2_audio_10',
+    'fim_test_audio_2' => 'fim_test_d2_audio_10',
+    'ini_test_audio_3' => 'ini_test_d2_audio_11',
+    'fim_test_audio_3' => 'fim_test_d2_audio_11',
+    'ini_test_audio_4' => 'ini_test_d2_audio_12',
+    'fim_test_audio_4' => 'fim_test_d2_audio_12',
+    'ini_test_audio_5' => 'ini_test_d2_audio_13',
+    'fim_test_audio_5' => 'fim_test_d2_audio_13',
+    'ini_test_audio_6' => 'ini_test_d2_audio_14',
+    'fim_test_audio_6' => 'fim_test_d2_audio_14',
+    'ini_test_audio_7' => 'ini_test_d2_audio_15',
+    'fim_test_audio_7' => 'fim_test_d2_audio_15',
+    'ini_test_audio_8' => 'ini_test_d2_audio_16',
+    'fim_test_audio_8' => 'fim_test_d2_audio_16' 
 ];
 
 

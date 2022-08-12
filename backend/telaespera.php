@@ -142,6 +142,15 @@ $stmt= $conn->prepare($update);
 $stmt->execute();
 
 
+//Limpa cookies
+
+for($i=1;$i<=13;$i++){
+    $nome_cok_i = "ini_test_audio_" . $i;
+    $nome_cok_f = "fim_test_audio_" . $i;
+    setcookie($nome_cok_i, "", time() - 3600, '/LPACTM2');
+    setcookie($nome_cok_f, "", time() - 3600, '/LPACTM2');
+}
+
 setcookie("TesteDia","1", time() + 60*60*24*30, '/LPACTM2');
 setcookie("iteracao","0", time() + 60*60*24*30, '/LPACTM2');
 

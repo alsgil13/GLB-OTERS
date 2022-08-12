@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script>
+    
+    function verificaEmail() {
+            
+            var email = $('#email').val();
+            var url_ajax = "backend/verificaEmail.php?email=" + email;
+            var url_ajax2 = "backend/verificaDia1Ok.php?email=" + email;
+    
+            $.ajax({
+                type: "GET",
+                url: url_ajax,
+                data: email
+            }).done(function (result) {
+                
+                if(result== ""){
+                    window.alert("Email não registrado, por favor informe o mesmo e-mail utilizado na etapa anterior.");
+                    $("#enviarAceite").attr("disabled", true);
+                    $("#enviarAceite").text("Utilize o mesmo e-mail para continuar");
+                } else {
+                    $.ajax({
+                        type: "GET",
+                        url: url_ajax2,
+                        data: email
+                    }).done(function (result) {
+                        
+                        if(result != "" && result != "NULL"){
+                            window.alert("Este usuário já completou o teste do dia 2.");
+                            $("#enviarAceite").attr("disabled", true);
+                            $("#enviarAceite").text("Teste Já realizado por este usuário");
+                        } else {
+                            $("#enviarAceite").attr("disabled", false);
+                            $("#enviarAceite").text("Iniciar");
+                        }
+                    });
+                    // $("#enviarAceite").attr("disabled", false);
+                    // $("#enviarAceite").text("Iniciar");
+                }
+            });
+
+
+
+
+
+    }
+</script>
+<title>Laboratório de Processos Associativos, Controle Temporal e Memória</title>
+</head>
+<body onload="zeraTudoD2()">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <br><br><br>
+        <h1 class="text-center">Laboratório de Processos Associativos, Controle Temporal e Memória</h1>
+    </div>
+</div>
+
+<div class="container">
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <br>
+        <h2 class="text-center">Bem vindo(a) à segunda fase do experimento!</h2>
+        <br><br><br><br>
+
+            <br>
+            <div class="form-group">
+                <label for="email">Insira seu e-mail:<br><small><i>O endereço de e-mail inserido abaixo deve ser o mesmo informado na primeira fase do experimento.</i></small></label>
+                
+                <input onchange="verificaEmail()"  required type="email" class="form-control" id="email" name="email" placeholder="E-mail" >
+                
+            </div>            
+            <br>
+            <p><small>Conforme já informado, os dados de e-mail e nome não serão usados para identificação pessoal e serão mantidos em sigilo.</small></p>
+            <p>Esta etapa é igual à anterior: serão apresentados estímulos e você fará a reprodução da duração.<br>
+                Serão apresentados estímulos visuais - círculo, mas sem os estímulos sonoros.
+            </p>
+            <ul>
+                <li>Clique sobre o botão virtual ”Iniciar a apresentação do estímulo”.  </li>
+                <li>Quando o estímulo (círculo) apagar, clique em Próximo.</li>
+            </ul>
+            <p>Em seguida, você irá reproduzir a duração da apresentação do estímulo que acabou de ver.</p>
+            <ul>
+                <li>Clique a tecla INÍCIO e deixe o tempo passar.</li>
+                <li>Quando você achar que o tempo que está passando for igual ao do estímulo apresentado, aperte a tecla FIM.</li>
+                <li>Clique em Próximo para prosseguir com o teste.</li>
+            </ul>
+            <p>Lembre-se que é muito importante que você não utilize nenhum recurso para contar a duração do estímulo. Isso pode interferir nos resultados do estudo.<br>
+                Nesta fase você repetirá o procedimento de estimar a duração de cada estímulo apresentado.</p>
+            <button id="enviarAceite"class="btn btn-primary btn-lg btn-block" onclick="iniciaTs24h()" >Iniciar</button>
+            
+        
+        <br><br><br><br>
+    </div>
+</div>
+</div>
+
+<!-- <script src="assets/js/ajax.js"></script> -->
+<script src="assets/js/validaForms.js?v=2"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
