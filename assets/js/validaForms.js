@@ -439,8 +439,22 @@ function exibeTsI(){
     //var dia = parseInt(getCookie("TesteDia"));
 
     var iteracao = parseInt(getCookie("iteracao"));
-    iteracao++;
-    document.cookie  = "iteracao=" + iteracao + ";";
+
+    //var iteracao = parseInt(getCookie("iteracao"));
+    //Verifica se não foi refresh (vendo se os cookies do teste anterior estão salvos)
+    //$iteracao_existe = document.cookie.indexOf('iteracao=');
+    $iae = document.cookie.indexOf('ini_test_audio_' + iteracao + '='); // ini anterior existe?
+    $fae = document.cookie.indexOf('fim_test_audio_' + iteracao + '='); // fim anterior existe?
+    if( iteracao > 0 && $iae > -1 && $fae > -1){
+        iteracao = iteracao + 1;
+        document.cookie  = "iteracao=" + iteracao + ";";
+    } else if(iteracao < 1){
+        iteracao = 1;
+        document.cookie  = "iteracao=" + iteracao + ";";
+    }
+
+    // iteracao++;
+    // document.cookie  = "iteracao=" + iteracao + ";";
     if(iteracao <= 8){
         var nm_cok_cor = "Cor_" + iteracao;
         cor = getCookie(nm_cok_cor);
