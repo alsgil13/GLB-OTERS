@@ -9,7 +9,7 @@ if($action == 1){
     $senha = isset($_POST['senha']) ? str_replace("'", "''", trim($_POST['senha']))           : '';
     if($senha == "W1nt3rmut3%rul&5Dw0rlD"){
         $admin = true;
-        $select = "Select nome, email, grupo, seqcod, fim_test_d2_audio_12 as D2 FROM lpactm_data_2";
+        $select = "SELECT nome, email, grupo, seqcod, fim_test_d2_audio_12 as D2 FROM lpactm_data_2 ORDER BY id DESC";
         $stmt= $conn->prepare($select);
         $stmt->execute();
         $dados = [];
