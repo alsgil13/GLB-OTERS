@@ -185,6 +185,7 @@ for($i=0;$i<count($sequencia);$i++){
 
 }
 
+//Salvar Cookies
 //grupo
 setcookie("grupo",$grupo, time() + 60*60*24*30, '/LPACTM2');
 //sequencia

@@ -471,6 +471,9 @@ function reproduzTsI(){
     cor = getCookie(nm_cok_cor);
     corRGB = getRGB(cor);
     document.getElementById("circulo").setAttribute("fill",corRGB);
+    iteracao++;
+    document.cookie  = "iteracao=" + iteracao + ";";
+
 
 
 }
