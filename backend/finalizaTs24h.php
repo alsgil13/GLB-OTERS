@@ -55,7 +55,18 @@ $stmt->execute();
     //window.alert("Você será redirecionado à um formulário Google, por favor preencha até o final e envie. \nUtilize o mesmo e-mail informado nessa etapa, tentaremos preenchê-lo automaticamente para você");
 
     var email = getCookie("email");
-    var urlForm = "https://docs.google.com/forms/d/e/1FAIpQLSdn50tRx1FU3LozxlGuuyqIotNCN6VG0QhXGgaaYsRHkLgZlQ/viewform?usp=pp_url&entry.662501075="+email;
+    var grupo = parseInt(getCookie("grupo"));
+    switch (grupo) {
+        case 1:
+            var urlForm = "https://docs.google.com/forms/d/e/1FAIpQLSeK9JL1XZguYuGcg3n5rPzumypE0MdVjM5erKiPI5hM5_EFpw/viewform?usp=pp_url&entry.757752652="+email;
+            break;
+        case 2:
+            var urlForm = "https://docs.google.com/forms/d/e/1FAIpQLSfp4Ct4Mu8yxG9EqXw4DKKJPY8QGOrmFRJJyLA1myyHJ9kP-g/viewform?usp=pp_url&entry.757752652="+email;
+            break;
+        case 3:
+            var urlForm = "https://docs.google.com/forms/d/e/1FAIpQLSffDETB2LNNv_rQXw95OXSpAskqSqZj7CZa8UN7kA9rbfR0cg/viewform?usp=pp_url&entry.757752652="+email;
+            break;
+      }
     mostraCookies();
     window.alert("Você será redirecionado à um formulário Google, por favor preencha até o final e envie. \nUtilize o mesmo e-mail informado nessa etapa, tentaremos preenchê-lo automaticamente para você.");
     window.location.replace(urlForm);
