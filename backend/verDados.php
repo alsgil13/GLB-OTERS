@@ -73,63 +73,75 @@ if($action == 1){
             <button type="submit" class="btn btn-primary mt-5">Carregar Dados</button>
         </form>
         
-        <h2>Balanceamento dos grupos</h2>
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th>Grupo</th>
-                    <th>Sequência</th>
-                    <th>Quantidade</th>
-                </tr>
-            </thead>
-            <tbody>
-            <?php
-              if(isset($dados_bal)){ 
-                
-                foreach($dados_bal as $d){
-                    
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h2>Balanceamento dos grupos</h2>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Grupo</th>
+                            <th>Sequência</th>
+                            <th>Quantidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    if(isset($dados_bal)){ 
+                        
+                        foreach($dados_bal as $d){
+                            
 
-                    
-            ?>
-            <tr>
-                <td><?=$d['grupo'] ?></td>
-                <td><?=$d['seqcod'] ?></td>
-                <td><?=$d['tanto'] ?></td>
-            </tr>
-            <?php } }?>
-            </tbody>
-        </table>
+                            
+                    ?>
+                    <tr>
+                        <td><?=$d['grupo'] ?></td>
+                        <td><?=$d['seqcod'] ?></td>
+                        <td><?=$d['tanto'] ?></td>
+                    </tr>
+                    <?php } }?>
+                    </tbody>
+                </table>                
+            </div>
+        </div>
         
-        <h2>Participantes</h2>
-    <table class="table table-hover">
-        <thead>
-            
-        </thead>
-        <tbody>
-            <?php
-              if(isset($dados)){ 
-                echo "<tr><th>Nome</th><th>E-mail</th><th>Grupo</th><th>Sequência</th><th>Status Dia 2</th></tr>";
-                foreach($dados as $d){
-                    
+       
+        
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h2>Participantes</h2>
+                <table class="table table-hover">
+                    <thead>
+                        
+                    </thead>
+                    <tbody>
+                        <?php
+                        if(isset($dados)){ 
+                            echo "<tr><th>Nome</th><th>E-mail</th><th>Grupo</th><th>Sequência</th><th>Status Dia 2</th></tr>";
+                            foreach($dados as $d){
+                                
 
-                    
-            ?>
-            <tr>
-                <td><?=$d['nome'] ?></td>
-                <td><?=$d['email'] ?></td>
-                <td><?=$d['grupo'] ?></td>
-                <td><?=$d['seqcod'] ?></td>
-                <td><?php
-                    if($d['D2'] == "NULL" || $d['D2'] == ""){
-                        echo "<span class='text-danger'>Pendente<span>";
-                    } else{
-                        echo "<span class='text-success'>Ok<span>";
-                    }
-                ?></td>
-            </tr>
-            <?php } }?>
-        </tbody>
-    </table>
+                                
+                        ?>
+                        <tr>
+                            <td><?=$d['nome'] ?></td>
+                            <td><?=$d['email'] ?></td>
+                            <td><?=$d['grupo'] ?></td>
+                            <td><?=$d['seqcod'] ?></td>
+                            <td><?php
+                                if($d['D2'] == "NULL" || $d['D2'] == ""){
+                                    echo "<span class='text-danger'>Pendente<span>";
+                                } else{
+                                    echo "<span class='text-success'>Ok<span>";
+                                }
+                            ?></td>
+                        </tr>
+                        <?php } }?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+       
     
 <?php
         // echo "<pre>";
