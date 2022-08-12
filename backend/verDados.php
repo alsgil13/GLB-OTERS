@@ -85,7 +85,7 @@ if($action == 1){
             <tbody>
             <?php
               if(isset($dados_bal)){ 
-                //echo "<tr><th>Nome</th><th>E-mail</th><th>Grupo</th><th>Sequência</th><th>Status Dia 2</th></tr>";
+                
                 foreach($dados_bal as $d){
                     
 
