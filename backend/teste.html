@@ -31,7 +31,7 @@
                 for(var k = 0; k < files.length; k++) {
                     var delayInMilliseconds = rand(13,22) * 1000;
                     var conteudo = document.getElementById('content').value;
-                    conteudo = conteudo + "<br>TESTE DE " +  testes[i] + ": " + pastas[j] + "/" + files[k];
+                    conteudo = conteudo + "<br>TESTE DE " +  teste[i] + ": " + pastas[j] + "/" + files[k];
                     setTimeout(function() {
                         document.getElementById('content').innerHTML = conteudo;
                     }, delayInMilliseconds);
