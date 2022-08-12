@@ -439,6 +439,7 @@ function exibeTsI(){
     //var dia = parseInt(getCookie("TesteDia"));
 
     var iteracao = parseInt(getCookie("iteracao"));
+    iteracao++;
     if(iteracao <= 8){
         var nm_cok_cor = "Cor_" + iteracao;
         cor = getCookie(nm_cok_cor);
@@ -471,8 +472,8 @@ function reproduzTsI(){
     cor = getCookie(nm_cok_cor);
     corRGB = getRGB(cor);
     document.getElementById("circulo").setAttribute("fill",corRGB);
-    iteracao++;
-    document.cookie  = "iteracao=" + iteracao + ";";
+    // iteracao++;
+    // document.cookie  = "iteracao=" + iteracao + ";";
 
 
 

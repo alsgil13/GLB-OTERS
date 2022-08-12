@@ -143,7 +143,7 @@ $stmt->execute();
 
 
 setcookie("TesteDia","1", time() + 60*60*24*30, '/LPACTM2');
-setcookie("iteracao","1", time() + 60*60*24*30, '/LPACTM2');
+setcookie("iteracao","0", time() + 60*60*24*30, '/LPACTM2');
 
 
 ?>
