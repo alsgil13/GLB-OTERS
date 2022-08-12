@@ -466,7 +466,7 @@ function exibeTsI(){
 
 function reproduzTsI(){
     //var dia = parseInt(getCookie("TesteDia"));
-    var iteracao = parseInt(getCookie("TesteDia"));
+    var iteracao = parseInt(getCookie("iteracao"));
     var nm_cok_cor = "Cor_" + iteracao;
     cor = getCookie(nm_cok_cor);
     corRGB = getRGB(cor);
