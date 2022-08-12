@@ -443,7 +443,7 @@ function exibeTsI(){
         var nm_cok_cor = "Cor_" + iteracao;
         cor = getCookie(nm_cok_cor);
         corRGB = getRGB(cor);
-        document.getElementById("ciruclo").setAttribute("fill",corRGB);
+        document.getElementById("circulo").setAttribute("fill",corRGB);
     } else {
         //Fazer o update do banco antes de encaminhar        
         
