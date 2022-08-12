@@ -440,6 +440,7 @@ function exibeTsI(){
 
     var iteracao = parseInt(getCookie("iteracao"));
     iteracao++;
+    document.cookie  = "iteracao=" + iteracao + ";";
     if(iteracao <= 8){
         var nm_cok_cor = "Cor_" + iteracao;
         cor = getCookie(nm_cok_cor);
