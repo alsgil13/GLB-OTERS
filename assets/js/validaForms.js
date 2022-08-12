@@ -438,7 +438,7 @@ function carregaEspera(){
 function exibeTsI(){
     //var dia = parseInt(getCookie("TesteDia"));
 
-    var iteracao = parseInt(getCookie("TesteDia"));
+    var iteracao = parseInt(getCookie("iteracao"));
     if(iteracao <= 8){
         var nm_cok_cor = "Cor_" + iteracao;
         cor = getCookie(nm_cok_cor);
