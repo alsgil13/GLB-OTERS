@@ -43,13 +43,13 @@ $update = substr($update, 0, -2);
 $update .= " WHERE email = '$email';";
 
 
-echo "<br>" . $update . "<br>";
+//echo "<br>" . $update . "<br>";
 
 $stmt= $conn->prepare($update);
 $stmt->execute();
 
 ?>
-
+<head>
 <script>
     //window.alert("Você será redirecionado à um formulário Google, por favor preencha até o final e envie. \nUtilize o mesmo e-mail informado nessa etapa, tentaremos preenchê-lo automaticamente para você");
 
@@ -59,4 +59,4 @@ $stmt->execute();
     window.alert("Você será redirecionado à um formulário Google, por favor preencha até o final e envie. \nUtilize o mesmo e-mail informado nessa etapa, tentaremos preenchê-lo automaticamente para você.");
     window.location.replace(urlForm);
 </script>
-
+</head>
