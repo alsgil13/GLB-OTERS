@@ -470,7 +470,7 @@ function reproduzTsI(){
     var nm_cok_cor = "Cor_" + iteracao;
     cor = getCookie(nm_cok_cor);
     corRGB = getRGB(cor);
-    document.getElementById("ciruclo").setAttribute("fill",corRGB);
+    document.getElementById("circulo").setAttribute("fill",corRGB);
 
 
 }
