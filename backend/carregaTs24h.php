@@ -18,13 +18,13 @@ $select = "SELECT
         WHERE 
             email = '$email'; ";
 
-echo $select . "<br>";
+// echo $select . "<br>";
 $stmt = $conn->prepare($select);
 $stmt->execute();
 
 $data = $stmt->fetch(PDO::FETCH_ASSOC);
 
-var_dump($data);
+// var_dump($data);
 $lista_de_biscoitos = [
     'ini_test_audio_1' => 'ini_test_d2_audio_1',
     'fim_test_audio_1' => 'fim_test_d2_audio_1',
