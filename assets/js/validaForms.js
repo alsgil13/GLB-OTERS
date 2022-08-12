@@ -407,44 +407,11 @@ function reproduzTr(){
     if(iteracao > 12){
         window.location.href = "backend/telaespera.php";
     }
-
     nm_cok_cor = "Cor_" + iteracao;
     grupo = parseInt(getCookie('grupo'));
     corCirculo = getCookie(nm_cok_cor);
-
-    //define cor do audio
-    // 
-    // if(grupo == 3){
-    //     corCirculo = getCookie(nm_cok_cor);
-    // } else {
-    //     //Verifica track
-    //     nm_cok_aud = "Audio_" + iteracao;
-    //     track = getCookie(nm_cok_aud);        
-    //     if(grupo == 1){
-    //         //Define cor baseado no audio
-    //         if(track.includes('vhna')){ // não agradavel 
-    //             corCirculo = "VERDE";
-    //         } else {
-    //             corCirculo = "AZUL";
-    //         }
-    //     } else if(grupo == 2){
-    //         //Define cor baseado no audio
-    //         if(track.includes('vhna')){ // não agradavel 
-    //             corCirculo = "AZUL";
-    //         } else {
-    //             corCirculo = "VERDE";
-    //         }            
-    //     }
-    //     //document.cookie  = nm_cok_cor + "=" + corCirculo + ";";
-    // }
     corRGB = getRGB(corCirculo);
-
-
-    // var audioTag = document.getElementById('player');
-    // audioTag.src = "assets/estimulos/" + track;
-    // audioTag.load();
     document.getElementById("circulo").setAttribute("fill",corRGB);
-
 }
 
 
@@ -495,4 +462,19 @@ function exibeTsI(){
         }
     }
 
+}
+
+function tocaCirculo(){
+    var delayInMilliseconds = 20000; //20 segundos
+    
+    document.getElementById("svg").classList.remove('invisivel');
+    document.getElementById('btn-prox').disabled = true;
+    document.getElementById('btn-play').disabled = true;
+
+    setTimeout(function() {
+        document.getElementById('btn-prox').disabled = false;
+        
+        document.getElementById("svg").classList.add('invisivel');
+        }, delayInMilliseconds
+    );
 }

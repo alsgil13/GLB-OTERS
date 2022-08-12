@@ -175,7 +175,7 @@ $stmt->execute();
 //setcookie("gfg", "", time() - 3600);
 
 
-//Salvar em cookies
+//Limpar Cookies
 for($i=0;$i<count($sequencia);$i++){
     $nome_a = "Audio_" . ($i+1);
     $nome_c = "Cor_" . ($i+1);
