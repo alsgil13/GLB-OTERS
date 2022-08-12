@@ -72,4 +72,4 @@ foreach ($data as $chave => $dado){
 
 ?>
 
-<script>window.location.href = "../exibeTs24h.html";</script>
+<!-- <script>window.location.href = "../exibeTs24h.html";</script> -->
