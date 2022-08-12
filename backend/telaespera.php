@@ -142,6 +142,9 @@ $stmt= $conn->prepare($update);
 $stmt->execute();
 
 
+setcookie("TesteDia","1", time() + 60*60*24*30, '/LPACTM2');
+setcookie("iteracao","1", time() + 60*60*24*30, '/LPACTM2');
+
 
 ?>
 
@@ -171,7 +174,7 @@ $stmt->execute();
             <br><br><br><br>
 
             <p>Esta etapa é igual à anterior: serão apresentados estímulos e você fará a reprodução da duração.</p>
-            <p>Serão apresentados estímulos visuais - círculo, mas sem os estímulos sonoros.<br><strong>Relembrando:</strong></p>
+            <p>Serão apresentados estímulos visuais - círculo, <u>mas sem os estímulos sonoros</u>.<br><strong>Relembrando:</strong></p>
             <ul>
                 <li>Clique sobre o botão virtual Iniciar a apresentação do estímulo.</li>
                 <li>Quando o estímulo (círculo) apagar, clique em Próximo.</li>

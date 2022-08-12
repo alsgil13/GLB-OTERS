@@ -464,6 +464,35 @@ function carregaEspera(){
     // document.getElementById("teste-exp-sm").innerHTML = 'Aguarde e você será redirecionado para a próxima etapa';
 
     setTimeout(function() {
-         window.location.href = "../instrucoesTsI.html";
+         window.location.href = "../exibeTsI.html";
     }, 20);
+}
+
+function exibeTsI(){
+    //var dia = parseInt(getCookie("TesteDia"));
+
+    var iteracao = parseInt(getCookie("TesteDia"));
+    if(iteracao <= 8){
+        var nm_cok_cor = "Cor_" + iteracao;
+        cor = getCookie(nm_cok_cor);
+        corRGB = getRGB(cor);
+        document.getElementById("ciruclo").setAttribute("fill",corRGB);
+    } else {
+        //Fazer o update do banco antes de encaminhar        
+        
+        
+        var dia = parseInt(getCookie("TesteDia"));
+
+        if(dia == 1){
+            window.location.href = "backend/finalizaTsI.php";
+        //     var email = getCookie("email");
+        //     var urlForm = "https://docs.google.com/forms/d/e/1FAIpQLSdn50tRx1FU3LozxlGuuyqIotNCN6VG0QhXGgaaYsRHkLgZlQ/viewform?usp=pp_url&entry.662501075="+email;
+        //     mostraCookies();
+        //     window.alert("Você será redirecionado à um formulário Google, por favor preencha até o final e envie. \nUtilize o mesmo e-mail informado nessa etapa, tentaremos preenchê-lo automaticamente para você");
+        //     window.location.replace(urlForm);
+        } else {
+            window.location.href = "backend/finalizaTs24h.php";
+        }
+    }
+
 }
