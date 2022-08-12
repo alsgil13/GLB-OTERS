@@ -1,4 +1,6 @@
 <?php
+require_once "../db/connect.php";
+
 $email = $_COOKIE['email'];
 
 $select = "SELECT 
