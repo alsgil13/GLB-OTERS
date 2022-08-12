@@ -17,6 +17,14 @@ if($action == 1){
             array_push($dados, $d);
         }
 
+        $select = "SELECT grupo, seqcod, COUNT(seqcod) as tanto FROM lpactm_data_2 GROUP BY grupo, seqcod ORDER BY grupo, seqcod ASC;";
+        $stmt= $conn->prepare($select);
+        $stmt->execute();
+        $dados_bal = [];
+        while($d = $stmt->fetch(PDO::FETCH_ASSOC)){
+            array_push($dados_bal, $d);
+        }
+
     } else {
         echo "<script>window.alert('Senha incorreta')</script>";
     }
@@ -65,7 +73,34 @@ if($action == 1){
             <button type="submit" class="btn btn-primary mt-5">Carregar Dados</button>
         </form>
         
-    
+        <h2>Balanceamento dos grupos</h2>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Grupo</th>
+                    <th>Sequência</th>
+                    <th>Quantidade</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+              if(isset($dados_bal)){ 
+                echo "<tr><th>Nome</th><th>E-mail</th><th>Grupo</th><th>Sequência</th><th>Status Dia 2</th></tr>";
+                foreach($dados_bal as $d){
+                    
+
+                    
+            ?>
+            <tr>
+                <td><?=$d['grupo'] ?></td>
+                <td><?=$d['seqcod'] ?></td>
+                <td><?=$d['tanto'] ?></td>
+            </tr>
+            <?php } }?>
+            </tbody>
+        </table>
+        
+        <h2>Participantes</h2>
     <table class="table table-hover">
         <thead>
             
