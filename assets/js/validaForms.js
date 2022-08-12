@@ -464,6 +464,17 @@ function exibeTsI(){
 
 }
 
+function reproduzTsI(){
+    //var dia = parseInt(getCookie("TesteDia"));
+    var iteracao = parseInt(getCookie("TesteDia"));
+    var nm_cok_cor = "Cor_" + iteracao;
+    cor = getCookie(nm_cok_cor);
+    corRGB = getRGB(cor);
+    document.getElementById("ciruclo").setAttribute("fill",corRGB);
+
+
+}
+
 function tocaCirculo(){
     var delayInMilliseconds = 20000; //20 segundos
     
