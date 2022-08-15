@@ -1,3 +1,4 @@
+<html>
 <?php
 require_once "../db/connect.php";
 
@@ -54,10 +55,33 @@ $stmt->execute();
 <script>
     //window.alert("Você será redirecionado à um formulário Google, por favor preencha até o final e envie. \nUtilize o mesmo e-mail informado nessa etapa, tentaremos preenchê-lo automaticamente para você");
 
-    var email = getCookie("email");
-    var urlForm = "https://docs.google.com/forms/d/e/1FAIpQLSdn50tRx1FU3LozxlGuuyqIotNCN6VG0QhXGgaaYsRHkLgZlQ/viewform?usp=pp_url&entry.662501075="+email;
-    mostraCookies();
-    window.alert("Você será redirecionado à um formulário Google, por favor preencha até o final e envie. \nUtilize o mesmo e-mail informado nessa etapa, tentaremos preenchê-lo automaticamente para você.");
-    window.location.replace(urlForm);
+    // var email = getCookie("email");
+    // var urlForm = "https://docs.google.com/forms/d/e/1FAIpQLSdn50tRx1FU3LozxlGuuyqIotNCN6VG0QhXGgaaYsRHkLgZlQ/viewform?usp=pp_url&entry.662501075="+email;
+    // mostraCookies();
+    // window.alert("Você será redirecionado à um formulário Google, por favor preencha até o final e envie. \nUtilize o mesmo e-mail informado nessa etapa, tentaremos preenchê-lo automaticamente para você.");
+    // window.location.replace(urlForm);
 </script>
+
+<!-- Latest compiled and minified CSS & JS -->
+<link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+
 </head>
+<body>
+    
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h1>Obrigada por sua participação hoje! Aguardo você amanhã no mesmo horário.</h1>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+
+<script src="//code.jquery.com/jquery.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>
