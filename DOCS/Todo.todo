@@ -4,18 +4,18 @@
     - testar email repetido @done
     - testar e-mail novo @done
     - criar connect do bd @done
-    - Detalhes: a verificação de e-mail é feita via ajax controlada por um script JS inscrito no arquivo index.html
-- Criar Definição de Grupo e Sequência
-- criar página de intruções pré-treino RB
-- Criar Teste Ruído Branco
-- criar página de intruções pré-exibição
-- Criar Interface de Exibição dos 12 áudios
-- Criar página de intruções pré-treino
-- Criar interface de Treino 12 audios
-- Criar página de intruções pré-treino
-- Criar Teste imediato
-- Criar encaminhamento para Questionário 1
-- Criar página de coleta de e-mail
-- Criar ajax de verificação de e-mail
-- Criar teste 24h
-- Criar encaminhamento para Questionário 2
+    - Detalhes: a verificação de e-mail é feita via ajax controlada por um script JS inscrito no arquivo index.html @done
+- Criar Definição de Grupo e Sequência @done
+- criar página de intruções pré-treino RB @done
+- Criar Teste Ruído Branco @done
+- criar página de intruções pré-exibição @done
+- Criar Interface de Exibição dos 12 áudios @done
+- Criar página de intruções pré-treino @done
+- Criar interface de Treino 12 audios @done
+- Criar página de intruções pré-treino @done
+- Criar Teste imediato @done
+- Criar encaminhamento para Questionário 1 @done
+- Criar página de coleta de e-mail @done
+- Criar ajax de verificação de e-mail @done
+- Criar teste 24h @done
+- Criar encaminhamento para Questionário 2 @done
