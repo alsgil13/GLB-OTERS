@@ -28,7 +28,7 @@ button{
 
 button{
     height: 10vh;
-    font-size: 1.3em;
+    font-size: 1.3em !important;
     font-weight: 700;
     border-radius: 10px;
 }
