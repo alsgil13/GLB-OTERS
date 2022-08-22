@@ -184,14 +184,24 @@ function exibeAudio(){
     }
     document.cookie  = "iteracao=" + iteracao + ";";
 
-    if(iteracao > 12){
+    if(iteracao > 24){
         window.location.href = "RBexibe.html";
     }
     grupo = parseInt(getCookie('grupo'));
 
     //define track
-    nm_cok_aud = "Audio_" + iteracao;
+
+    if(iteracao <= 8){
+        iter_audio = iteracao
+    } else if( iteracao > 8 && iteracao <=16){
+        iter_audio = (iteracao - 8)
+    } else{
+        iter_audio = (iteracao - 16)
+    }
+
+    nm_cok_aud = "Audio_" + iter_audio;
     track = getCookie(nm_cok_aud);
+
     //define cor do audio
     nm_cok_cor = "Cor_" + iteracao;
     if(grupo == 3){
@@ -360,7 +370,7 @@ function exibeAudioTr(){
 
 
 
-    if(iteracao > 12){
+    if(iteracao > 8){
         window.location.href = "backend/telaespera.php";
     }
     grupo = parseInt(getCookie('grupo'));
@@ -404,7 +414,7 @@ function exibeAudioTr(){
 function reproduzTr(){
     var iteracao = parseInt(getCookie("iteracao"));
 
-    if(iteracao > 12){
+    if(iteracao > 8){
         window.location.href = "backend/telaespera.php";
     }
     nm_cok_cor = "Cor_" + iteracao;

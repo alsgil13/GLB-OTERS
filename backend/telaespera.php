@@ -50,27 +50,7 @@ $lista_de_biscoitos = [
     'fim_test_audio_8',
 
     
-    'Audio_9',
-    'Cor_9',
-    'ini_test_audio_9',
-    'fim_test_audio_9',
-
-
-    'Audio_10',
-    'Cor_10',
-    'ini_test_audio_10',
-    'fim_test_audio_10',
-
-    'Audio_11',
-    'Cor_11',
-    'ini_test_audio_11',
-    'fim_test_audio_11',
-    
-    'Audio_12',
-    'Cor_12',
-    'ini_test_audio_12',
-    'fim_test_audio_12'    
-    
+       
 ];
 
 
@@ -98,18 +78,6 @@ $desambigBD = [
 
     "Audio_8"    => "file_audio_8",
     "Cor_8"      => "cor_audio_8",
-
-    "Audio_9"    => "file_audio_9",
-    "Cor_9"      => "cor_audio_9",
-
-    "Audio_10"    => "file_audio_10",
-    "Cor_10"      => "cor_audio_10",
-
-    "Audio_11"    => "file_audio_11",
-    "Cor_11"      => "cor_audio_11",
-
-    "Audio_12"    => "file_audio_12",
-    "Cor_12"      => "cor_audio_12",
 ];
 
 
@@ -123,9 +91,9 @@ foreach($lista_de_biscoitos as $c){
             $update .= $desambigBD[$c] . " = '" . $_COOKIE[$c]. "', ";
             //$dado = "'" . $_COOKIE[$c] . "'"; //false
         }
-    } else {
+    } //else {
         //$dado = 'NULL';
-    }
+    //}
     //$insert_pt2 .= $dado . ", ";
     //$dados_cookies[$c] = $dado;
     
@@ -144,7 +112,7 @@ $stmt->execute();
 
 //Limpa cookies
 
-for($i=1;$i<=13;$i++){
+for($i=1;$i<=9;$i++){
     $nome_cok_i = "ini_test_audio_" . $i;
     $nome_cok_f = "fim_test_audio_" . $i;
     setcookie($nome_cok_i, "", time() - 3600, '/LPACTM2');
