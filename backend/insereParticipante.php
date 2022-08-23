@@ -116,7 +116,7 @@ foreach($totais as $chave => $valor){
 if($grupo == 3){
     $seqcod = 1;    
     $sequencia =        ["vhabex.mp3",  "vhnaax.mp3",   "vhnaebx.mp3",  "vhadz.mp3",    "vhaez.mp3",    "vhnasffz.mp3",     "vhaflx.mp3",   "vhnaitx.mp3"];
-    $sequencia_cores =  ["VERDE",       "VERDE",        "AZUL",         "AZUL",         "VERDE",        "AZUL",             "AZUL",         "VERDE"];
+    $sequencia_cores =  ["VERDE",       "VERDE",        "AZUL",         "AZUL",         "VERDE",        "AZUL",             "AZUL",         "VERDE","VERDE",       "VERDE",        "AZUL",         "AZUL",         "VERDE",        "AZUL",             "AZUL",         "VERDE","VERDE",       "VERDE",        "AZUL",         "AZUL",         "VERDE",        "AZUL",             "AZUL",         "VERDE"];
 
 
 } else {
@@ -176,7 +176,7 @@ $stmt->execute();
 
 
 //Limpar Cookies
-for($i=0;$i<count($sequencia);$i++){
+for($i=0;$i<24;$i++){
     $nome_a = "Audio_" . ($i+1);
     $nome_c = "Cor_" . ($i+1);
     //setcookie($nome,$sequencia[$i], time() + 60*60*24*30, '/');
@@ -201,7 +201,7 @@ for($i=0;$i<count($sequencia);$i++){
 //se grupo 3: sequencia cores
 if($grupo == 3){
     //setcookie("sequencia_cores",addslashes(arrayToString($sequencia_cores)), time() + 60*60*24*30, '/');
-    for($i=0;$i<count($sequencia);$i++){
+    for($i=0;$i<count($sequencia_cores);$i++){
         $nome = "Cor_" . ($i+1);
         setcookie($nome,$sequencia_cores[$i], time() + 60*60*24*30, '/LPACTM2');
     

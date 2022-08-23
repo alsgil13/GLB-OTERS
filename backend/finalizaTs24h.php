@@ -52,6 +52,13 @@ $stmt->execute();
 <head>
 <script src="../assets/js/validaForms.js?v=2"></script>
 <script>
+    history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function () {
+        history.pushState(null, null, document.URL);
+    });
+
+</script>
+<script>
     //window.alert("Você será redirecionado à um formulário Google, por favor preencha até o final e envie. \nUtilize o mesmo e-mail informado nessa etapa, tentaremos preenchê-lo automaticamente para você");
 
     var email = getCookie("email");

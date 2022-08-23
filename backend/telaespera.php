@@ -183,7 +183,13 @@ setcookie("iteracao","0", time() + 60*60*24*30, '/LPACTM2');
     
     
 </div>
+<script>
+    history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function () {
+        history.pushState(null, null, document.URL);
+    });
 
+</script>
 <script src="../assets/js/validaForms.js?v=2"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>

@@ -33,6 +33,11 @@ button{
     border-radius: 10px;
 }
 
+#teste-exp{
+    font-size: 2em !important;
+    font-weight: 700;
+}
+
 .btn-test{
 
     width: 50%;
