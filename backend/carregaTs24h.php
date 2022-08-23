@@ -71,5 +71,11 @@ foreach ($data as $chave => $dado){
 
 
 ?>
+<script>
+    history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function () {
+        history.pushState(null, null, document.URL);
+    });
 
+</script>
 <script>window.location.href = "../exibeTs24h.html";</script>
