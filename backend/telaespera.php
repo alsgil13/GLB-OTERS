@@ -168,7 +168,7 @@ setcookie("iteracao","0", time() + 60*60*24*30, '/LPACTM2');
             <!-- <p class="text-center" id="teste-exp-sm"><small>Aguarde e você será redirecionado para a próxima etapa</small></p> -->
         </div>
     </div>
-    <h1 class="text-center" id="teste-exp">Aguarde</h1>
+    <h1 class="text-center" id="teste-exp" style="font-size: calc(4rem + 1.5vw);">Aguarde</h1>
 
     
     <div class="row invisivel" id='btn-espera'>
