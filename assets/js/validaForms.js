@@ -496,6 +496,15 @@ function exibeTsI(){
 function reproduzTsI(){
     //var dia = parseInt(getCookie("TesteDia"));
     var iteracao = parseInt(getCookie("iteracao"));
+    if(iteracao > 8){
+        var dia = parseInt(getCookie("TesteDia"));
+
+        if(dia == 1){
+            window.location.href = "backend/finalizaTsI.php";
+        } else {
+            window.location.href = "backend/finalizaTs24h.php";
+        }
+    }
     var nm_cok_cor = "Cor_" + iteracao;
     cor = getCookie(nm_cok_cor);
     corRGB = getRGB(cor);
