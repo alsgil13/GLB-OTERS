@@ -28,13 +28,13 @@ button{
 
 button{
     height: 10vh;
-    font-size: 2em !important;
+    font-size: 1.7em !important;
     font-weight: 700;
     border-radius: 10px;
 }
 
 #teste-exp{
-    font-size: 1.7em !important;
+    font-size: 2em !important;
     font-weight: 700;
 }
 
