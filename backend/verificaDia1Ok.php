@@ -4,7 +4,7 @@ require_once "../db/connect.php";
 
 if(isset($_GET['email'])){
     $email = $_GET['email'];
-    $select = "SELECT fim_test_d2_audio_12 FROM lpactm_data WHERE email = '$email'; ";
+    $select = "SELECT fim_test_d2_audio_12 FROM lpactm_data_2 WHERE email = '$email'; ";
     $stmt = $conn->prepare($select);
     $stmt->execute();
     
