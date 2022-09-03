@@ -62,11 +62,23 @@ $i = 0;
 foreach ($data as $chave => $dado){
     if($chave=="grupo"){
         setcookie("grupo", $dado, time() + 60*60*24*30, '/LPACTM2');
+        $gp = $dado;
     } else {
         $nome_cok = "Cor_" . $i;
         setcookie($nome_cok, $dado, time() + 60*60*24*30, '/LPACTM2');
     }
     $i++;
+}
+
+if(!in_array($gp,[1,2,3])){
+?>
+<script>
+    window.alert("Erro ao carregar dados do e-mail informado, por favor, verifique o e-mail e tente novamente");
+    window.location.replace("https://a-gil.tech/LPACTM2/intrucoesTs24h.html");
+
+</script>
+<?php
+
 }
 
 
